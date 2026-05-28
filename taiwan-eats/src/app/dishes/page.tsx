@@ -3,12 +3,12 @@ import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 
 const dishes = [
-  { tag: "Noodles", title: "The best beef noodle soup in Taipei — ranked and mapped", readTime: "8 min read", location: "Taipei", emoji: "🍜", href: "/dishes/beef-noodle-soup-taipei", bgColor: "bg-coral-50" },
-  { tag: "Drinks", title: "Ordering bubble tea like a local", readTime: "5 min read", emoji: "🧋", href: "/dishes/bubble-tea-guide", bgColor: "bg-amber-50" },
-  { tag: "Street Food", title: "Scallion pancakes: the ultimate breakfast guide", readTime: "4 min read", emoji: "🥞", href: "/dishes/scallion-pancake", bgColor: "bg-green-50" },
-  { tag: "Rice", title: "Lu rou fan: Taiwan's most comforting bowl", readTime: "6 min read", emoji: "🍱", href: "/dishes/lu-rou-fan", bgColor: "bg-coral-50" },
-  { tag: "Dumplings", title: "Where to eat xiao long bao outside of Din Tai Fung", readTime: "7 min read", location: "Taipei", emoji: "🥟", href: "/dishes/xiao-long-bao", bgColor: "bg-blue-50" },
-  { tag: "Seafood", title: "Oyster omelette: what it is and where to eat it", readTime: "5 min read", emoji: "🦪", href: "/dishes/oyster-omelette", bgColor: "bg-amber-50" },
+  { tag: "Noodles", title: "The best beef noodle soup in Taipei — ranked and mapped", readTime: "8 min read", location: "Taipei", emoji: "🍜", href: "/dishes/beef-noodle-soup-taipei", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/noodle-soup/800/400" },
+  { tag: "Drinks", title: "Ordering bubble tea like a local", readTime: "5 min read", emoji: "🧋", href: "/dishes/bubble-tea-guide", bgColor: "bg-amber-50", image: "https://picsum.photos/seed/bubble-drink/800/400" },
+  { tag: "Street Food", title: "Scallion pancakes: the ultimate breakfast guide", readTime: "4 min read", emoji: "🥞", href: "/dishes/scallion-pancake", bgColor: "bg-green-50", image: "https://picsum.photos/seed/breakfast-street/800/400" },
+  { tag: "Rice", title: "Lu rou fan: Taiwan's most comforting bowl", readTime: "6 min read", emoji: "🍱", href: "/dishes/lu-rou-fan", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/braised-pork/800/400" },
+  { tag: "Dumplings", title: "Where to eat xiao long bao outside of Din Tai Fung", readTime: "7 min read", location: "Taipei", emoji: "🥟", href: "/dishes/xiao-long-bao", bgColor: "bg-blue-50", image: "https://picsum.photos/seed/dumpling-steam/800/400" },
+  { tag: "Seafood", title: "Oyster omelette: what it is and where to eat it", readTime: "5 min read", emoji: "🦪", href: "/dishes/oyster-omelette", bgColor: "bg-amber-50", image: "https://picsum.photos/seed/oyster-egg/800/400" },
 ];
 
 export const metadata = {

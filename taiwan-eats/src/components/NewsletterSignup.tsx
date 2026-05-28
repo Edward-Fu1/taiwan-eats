@@ -33,8 +33,9 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <div className="bg-gray-50 border border-gray-100 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div className="bg-coral-50 border border-coral-100 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
+        <p className="text-xs font-medium tracking-widest uppercase text-coral-600 mb-2">Weekly brief</p>
         <h3 className="font-serif text-xl font-bold mb-1">Get the weekly Taiwan food brief</h3>
         <p className="text-sm text-gray-500">New restaurants, seasonal dishes, and tips — every Thursday.</p>
       </div>
@@ -44,19 +45,21 @@ export default function NewsletterSignup() {
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-2 flex-shrink-0">
           <div className="flex gap-2">
+            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
             <input
+              id="newsletter-email"
               type="email"
               required
               placeholder="your@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={status === "loading"}
-              className="border border-gray-200 rounded-lg px-4 py-2 text-sm w-52 focus:outline-none focus:border-coral-400 disabled:opacity-50"
+              className="border border-coral-200 bg-white rounded-lg px-4 py-2.5 text-sm w-52 focus:outline-none focus:border-coral-400 focus:ring-1 focus:ring-coral-400 disabled:opacity-50"
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="bg-coral-400 hover:bg-coral-600 disabled:opacity-60 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              className="bg-coral-600 hover:bg-coral-800 disabled:opacity-60 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors"
             >
               {status === "loading" ? "..." : "Subscribe"}
             </button>

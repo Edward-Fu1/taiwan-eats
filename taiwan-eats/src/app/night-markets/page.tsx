@@ -3,10 +3,10 @@ import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 
 const markets = [
-  { tag: "Taipei", title: "Shilin Night Market: the complete guide", readTime: "10 min read", location: "Taipei", emoji: "🌙", href: "/night-markets/shilin", bgColor: "bg-blue-50" },
-  { tag: "Taipei", title: "Raohe Night Market: smaller, better, less crowded", readTime: "7 min read", location: "Taipei", emoji: "🏮", href: "/night-markets/raohe", bgColor: "bg-coral-50" },
-  { tag: "Tainan", title: "Huayuan Night Market: Tainan's best kept secret", readTime: "6 min read", location: "Tainan", emoji: "🌟", href: "/night-markets/huayuan", bgColor: "bg-amber-50" },
-  { tag: "Kaohsiung", title: "Liuhe Night Market: seafood heaven in Kaohsiung", readTime: "8 min read", location: "Kaohsiung", emoji: "🦐", href: "/night-markets/liuhe", bgColor: "bg-green-50" },
+  { tag: "Taipei", title: "Shilin Night Market: the complete guide", readTime: "10 min read", location: "Taipei", emoji: "🌙", href: "/night-markets/shilin", bgColor: "bg-blue-50", image: "https://picsum.photos/seed/shilin-night/800/400" },
+  { tag: "Taipei", title: "Raohe Night Market: smaller, better, less crowded", readTime: "7 min read", location: "Taipei", emoji: "🏮", href: "/night-markets/raohe", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/raohe-market/800/400" },
+  { tag: "Tainan", title: "Huayuan Night Market: Tainan's best kept secret", readTime: "6 min read", location: "Tainan", emoji: "🌟", href: "/night-markets/huayuan", bgColor: "bg-amber-50", image: "https://picsum.photos/seed/huayuan-tainan/800/400" },
+  { tag: "Kaohsiung", title: "Liuhe Night Market: seafood heaven in Kaohsiung", readTime: "8 min read", location: "Kaohsiung", emoji: "🦐", href: "/night-markets/liuhe", bgColor: "bg-green-50", image: "https://picsum.photos/seed/liuhe-seafood/800/400" },
 ];
 
 export const metadata = {
