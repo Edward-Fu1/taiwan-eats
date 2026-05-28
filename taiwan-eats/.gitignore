@@ -5,7 +5,7 @@ node_modules/
 .next/
 out/
 
-# env files
+# env files (never commit real keys)
 .env
 .env.local
 .env.*.local

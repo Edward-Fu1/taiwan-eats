@@ -17,7 +17,8 @@ export default function ArticleCard({
 }: ArticleCardProps) {
   return (
     <Link href={href} className="group block border border-gray-100 rounded-xl overflow-hidden hover:border-gray-300 transition-colors bg-white">
-      <div className={`${bgColor} flex items-center justify-center ${large ? "h-48" : "h-28"} text-${large ? "6xl" : "4xl"}`}>
+      {/* Fix: use explicit class strings, not template-literal-constructed ones */}
+      <div className={`${bgColor} flex items-center justify-center ${large ? "h-48 text-6xl" : "h-28 text-4xl"}`}>
         {emoji}
       </div>
       <div className="p-4">

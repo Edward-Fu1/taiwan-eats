@@ -22,7 +22,7 @@ export default function DishesPage() {
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
         <h1 className="font-serif text-4xl font-bold mb-2">Dish guides</h1>
-        <p className="text-gray-500 mb-10">Everything you need to know about Taiwan's most iconic foods.</p>
+        <p className="text-gray-500 mb-10">Everything you need to know about Taiwan&apos;s most iconic foods.</p>
         <div className="grid md:grid-cols-3 gap-4">
           {dishes.map((d) => <ArticleCard key={d.href} {...d} />)}
         </div>
