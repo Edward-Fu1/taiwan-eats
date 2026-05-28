@@ -15,6 +15,7 @@ export const featuredArticles = [
     emoji: "🍜",
     href: "/dishes/beef-noodle-soup-taipei",
     bgColor: "bg-coral-50",
+    image: "https://picsum.photos/seed/noodle-soup/800/400",
     large: true,
   },
   {
@@ -24,6 +25,7 @@ export const featuredArticles = [
     emoji: "🧋",
     href: "/dishes/bubble-tea-guide",
     bgColor: "bg-amber-50",
+    image: "https://picsum.photos/seed/bubble-drink/800/400",
   },
   {
     tag: "Night Market",
@@ -32,6 +34,7 @@ export const featuredArticles = [
     emoji: "🌙",
     href: "/night-markets/shilin-vs-raohe",
     bgColor: "bg-blue-50",
+    image: "https://picsum.photos/seed/shilin-night/800/400",
   },
 ];
 

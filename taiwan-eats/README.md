@@ -44,6 +44,17 @@ npm i -g vercel
 vercel
 ```
 
+## Changelog
+
+### UI/UX improvements (May 2026)
+
+- **Sticky navbar** — pinned to top with backdrop blur; active link highlighted via `usePathname`; mobile menu animates open/closed instead of snapping
+- **Photo collage hero** — replaced the emoji dish grid with a `next/image` photo collage with gradient label overlays
+- **WCAG AA contrast fix** — CTA button backgrounds changed from `coral-400` (#D85A30, 3.86:1) to `coral-600` (#993C1D, 7.0:1) for white text
+- **Taller article card images** — raised from 112px to 160px (large: 208px); added `line-clamp-2` and hover shadow lift
+- **Newsletter accessibility** — added `sr-only` label for the email input; coral brand background replaces gray; merged async loading/error states
+- **"See all" and "Explore" affordances** — added "See all →" link on Featured Reads and "Explore →" on city cards
+
 ## Adding content
 
 Edit `src/lib/data.ts` to update categories, featured articles, and cities.
