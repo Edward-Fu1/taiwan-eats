@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { NextResponse } from "next/server";
 
 // To activate: set RESEND_API_KEY and RESEND_AUDIENCE_ID in your .env.local
