@@ -250,6 +250,97 @@ export default function TaipeiPage() {
           </div>
         </section>
 
+        {/* YouBike */}
+        <section className="mb-14">
+          <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Getting around</p>
+          <h2 className="font-serif text-2xl font-bold mb-3">YouBike 微笑單車</h2>
+          <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">
+            Taipei&apos;s public bike-share system is one of the best in Asia — over 1,400 docking stations, available 24/7, and cheap enough that you&apos;ll use it without thinking about the cost. The current version, YouBike 2.0, launched in 2021 with lighter bikes and smaller stations that fit into tighter spots around the city.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            {/* Pricing */}
+            <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+              <p className="font-semibold text-emerald-800 mb-3 text-sm">Pricing</p>
+              <ul className="space-y-2 text-xs text-emerald-900 leading-relaxed">
+                <li className="flex justify-between">
+                  <span>First 30 min</span>
+                  <span className="font-bold">NT$10</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>30–60 min</span>
+                  <span className="font-bold">NT$20</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Each extra 30 min</span>
+                  <span className="font-bold">NT$40</span>
+                </li>
+                <li className="pt-2 border-t border-emerald-200 text-emerald-700">
+                  Most rides between MRT stations are well under 30 minutes — effectively NT$10 a trip.
+                </li>
+              </ul>
+            </div>
+
+            {/* How to use */}
+            <div className="bg-white border border-gray-100 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 mb-3 text-sm">How to rent</p>
+              <ol className="space-y-2 text-xs text-gray-500 leading-relaxed list-none">
+                <li className="flex gap-2"><span className="font-bold text-gray-800 flex-shrink-0">1.</span> Download the <span className="font-medium text-gray-700">YouBike app</span> (iOS/Android) and register with a credit card — fastest option for visitors.</li>
+                <li className="flex gap-2"><span className="font-bold text-gray-800 flex-shrink-0">2.</span> Or tap your <span className="font-medium text-gray-700">EasyCard</span> at any docking station dock to unlock a bike directly.</li>
+                <li className="flex gap-2"><span className="font-bold text-gray-800 flex-shrink-0">3.</span> Return to <span className="font-medium text-gray-700">any YouBike station</span> — not just the one you borrowed from.</li>
+              </ol>
+            </div>
+
+            {/* Tips */}
+            <div className="bg-white border border-gray-100 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 mb-3 text-sm">Good to know</p>
+              <ul className="space-y-2 text-xs text-gray-500 leading-relaxed">
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">▸</span> Return before 30 minutes whenever possible — the cost jumps quickly after that.</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">▸</span> Stations near MRT exits fill up fast on weekday mornings — return slots may also be full.</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">▸</span> Helmets are not provided. Not legally required for adults, but advisable on busier roads.</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">▸</span> Bikes have a basket and 3-speed gear. Fine for flat city riding; some hills will make you sweat.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Food routes by bike */}
+          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+            <p className="font-semibold text-gray-900 mb-4 text-sm">Best food routes by bike</p>
+            <div className="grid md:grid-cols-2 gap-4 text-xs text-gray-500">
+              {[
+                {
+                  route: "Dongmen → Yongkang Street loop",
+                  time: "~5 min",
+                  desc: "Ride from Dongmen MRT station straight into the Yongkang Street food corridor. Park at the station on Jinhua St and browse at your own pace.",
+                },
+                {
+                  route: "Riverside cycling paths",
+                  time: "As long as you like",
+                  desc: "Taipei has 100+ km of dedicated riverside bike paths along the Danshui and Xindian rivers. Flat, car-free, and dotted with food stalls on weekends.",
+                },
+                {
+                  route: "Zhongshan → Ningxia Night Market",
+                  time: "~8 min",
+                  desc: "From Zhongshan MRT, ride north to Ningxia Night Market. Much faster than walking and there's a YouBike station right at the market entrance.",
+                },
+                {
+                  route: "Xinyi district food hall crawl",
+                  time: "~10 min loop",
+                  desc: "Ride between the Breeze, Bellavita, and Taipei 101 basement food halls. Faster than walking between them, and you look like a local doing it.",
+                },
+              ].map((r) => (
+                <div key={r.route} className="flex gap-3">
+                  <span className="text-emerald-500 font-bold flex-shrink-0 mt-0.5">🚲</span>
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-0.5">{r.route} <span className="font-normal text-gray-400">· {r.time}</span></p>
+                    <p className="leading-relaxed">{r.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Things to know */}
         <section className="mb-14">
           <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Before you go</p>
