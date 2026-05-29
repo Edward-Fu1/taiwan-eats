@@ -112,6 +112,144 @@ export default function TaipeiPage() {
           </div>
         </section>
 
+        {/* Taipei MRT */}
+        <section className="mb-14">
+          <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Getting around</p>
+          <h2 className="font-serif text-2xl font-bold mb-3">The Taipei MRT 捷運</h2>
+          <p className="text-gray-500 leading-relaxed mb-8 max-w-2xl">
+            Taipei&apos;s metro system is one of the cleanest, cheapest, and most reliable in the world. Five colour-coded lines cover virtually every neighbourhood and tourist spot in the city. Fares start at NT$20 and a single-day pass costs NT$180 — worth it if you&apos;re making more than 4 trips.
+          </p>
+
+          {/* Lines */}
+          <div className="space-y-3 mb-8">
+            {[
+              {
+                color: "bg-red-600",
+                textColor: "text-red-600",
+                borderColor: "border-red-100",
+                bgColor: "bg-red-50",
+                name: "Red Line",
+                chinese: "淡水信義線",
+                english: "Tamsui–Xinyi",
+                stops: "Tamsui → Taipei Main → Da'an → Xiangshan (Taipei 101)",
+                food: "Yongkang St (Da'an), Shilin Night Market (Shilin stop)",
+              },
+              {
+                color: "bg-emerald-700",
+                textColor: "text-emerald-700",
+                borderColor: "border-emerald-100",
+                bgColor: "bg-emerald-50",
+                name: "Green Line",
+                chinese: "松山新店線",
+                english: "Songshan–Xindian",
+                stops: "Songshan → Taipei Main → Zhongxiao Xinsheng → Xindian",
+                food: "Raohe Night Market (Songshan), Gongguan student area (Gongguan)",
+              },
+              {
+                color: "bg-blue-600",
+                textColor: "text-blue-600",
+                borderColor: "border-blue-100",
+                bgColor: "bg-blue-50",
+                name: "Blue Line",
+                chinese: "板南線",
+                english: "Bannan",
+                stops: "Yongning → Taipei Main → Zhongxiao Fuxing → City Hall → Nangang",
+                food: "Tonghua Night Market (Linan St nearby), Breeze Centre food hall (Zhongxiao)",
+              },
+              {
+                color: "bg-orange-500",
+                textColor: "text-orange-600",
+                borderColor: "border-orange-100",
+                bgColor: "bg-orange-50",
+                name: "Orange Line",
+                chinese: "中和新蘆線",
+                english: "Zhonghe–Xinlu",
+                stops: "Huannan Market → Zhongshan Junior High → Daqiaotou",
+                food: "Daqiaotou 大橋頭 — the best lu rou fan neighbourhood in Taipei",
+              },
+              {
+                color: "bg-yellow-700",
+                textColor: "text-yellow-700",
+                borderColor: "border-yellow-100",
+                bgColor: "bg-yellow-50",
+                name: "Brown Line",
+                chinese: "文湖線",
+                english: "Wenhu (elevated)",
+                stops: "Taipei City Hall → Zhongshan Junior High → Muzha (Zoo)",
+                food: "Fuxing SOGO food basement (Zhongxiao Fuxing), Huashan Market area",
+              },
+            ].map((line) => (
+              <div
+                key={line.name}
+                className={`flex items-start gap-4 rounded-xl border ${line.borderColor} ${line.bgColor} px-4 py-4`}
+              >
+                {/* Colour pill */}
+                <span
+                  className={`flex-shrink-0 mt-0.5 w-3 h-3 rounded-full ${line.color} ring-2 ring-white shadow-sm`}
+                />
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-2 mb-0.5">
+                    <span className={`font-semibold text-sm ${line.textColor}`}>{line.name}</span>
+                    <span className="text-xs text-gray-400">{line.chinese} · {line.english}</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-1 leading-relaxed">{line.stops}</p>
+                  <p className="text-xs font-medium text-gray-700">
+                    <span className="text-gray-400">Good for food: </span>{line.food}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Key food stations */}
+          <h3 className="font-serif text-lg font-bold mb-4">Key stations for eating</h3>
+          <div className="grid md:grid-cols-2 gap-3 mb-8">
+            {[
+              { station: "Taipei Main Station", chinese: "台北車站", lines: ["Red", "Green", "Blue"], note: "Underground mall with dozens of cheap lunch spots. Best for a quick bowl before catching a train." },
+              { station: "Dongmen", chinese: "東門站", lines: ["Red", "Green"], note: "Exit 5 leads straight to Yongkang Street — Taiwan's most famous beef noodle soup corridor." },
+              { station: "Zhongshan", chinese: "中山站", lines: ["Red", "Green"], note: "10-minute walk to Ningxia Night Market (寧夏夜市), Taipei's most local night market." },
+              { station: "Shilin", chinese: "士林站", lines: ["Red"], note: "10-minute walk to Shilin Night Market. Exit 1 is the closest to the food stalls underground." },
+              { station: "Songshan", chinese: "松山站", lines: ["Green"], note: "5-minute walk to Raohe Night Market. One of the easiest night market commutes in the city." },
+              { station: "Zhongxiao Fuxing", chinese: "忠孝復興站", lines: ["Blue", "Brown"], note: "SOGO department store food basement, dense café scene, Tonghua Night Market nearby." },
+            ].map((s) => (
+              <div key={s.station} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="font-semibold text-sm text-gray-900">{s.station}</span>
+                  <span className="text-xs text-gray-400">{s.chinese}</span>
+                </div>
+                <div className="flex gap-1 mb-2">
+                  {s.lines.map((l) => (
+                    <span key={l} className={`text-[0.6rem] font-bold px-1.5 py-0.5 rounded-full text-white ${
+                      l === "Red" ? "bg-red-600" :
+                      l === "Green" ? "bg-emerald-700" :
+                      l === "Blue" ? "bg-blue-600" :
+                      l === "Orange" ? "bg-orange-500" :
+                      "bg-yellow-700"
+                    }`}>{l}</span>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">{s.note}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Practical tips */}
+          <div className="bg-tw-indigo-600 text-white rounded-2xl p-6 grid md:grid-cols-3 gap-5 text-sm">
+            <div>
+              <p className="font-semibold mb-1.5">💳 EasyCard (悠遊卡)</p>
+              <p className="text-white/75 leading-relaxed text-xs">Buy at any MRT station for NT$100 deposit. Tap in and out. You get a small discount on every ride vs single-journey tokens. Also works at convenience stores and buses.</p>
+            </div>
+            <div>
+              <p className="font-semibold mb-1.5">🕐 Operating hours</p>
+              <p className="text-white/75 leading-relaxed text-xs">Most lines run 6:00 AM – midnight daily. Last train times vary by station and direction — check the digital countdown on the platform. Trains every 3–6 minutes during peak hours.</p>
+            </div>
+            <div>
+              <p className="font-semibold mb-1.5">🚫 No eating on trains</p>
+              <p className="text-white/75 leading-relaxed text-xs">Eating and drinking on the MRT is prohibited and fined up to NT$7,500. Buy your street food, find a bench outside the paid zone, then board. Nobody is exempt — locals follow this rule strictly.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Insider tip */}
         <section className="mb-14 border-l-4 border-coral-400 pl-6">
           <p className="text-xs font-medium tracking-widest uppercase text-coral-400 mb-2">Insider tip</p>
