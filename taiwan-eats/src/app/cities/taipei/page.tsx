@@ -112,6 +112,151 @@ export default function TaipeiPage() {
           </div>
         </section>
 
+        {/* Hot spots */}
+        <section className="mb-14">
+          <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Where to actually go</p>
+          <h2 className="font-serif text-2xl font-bold mb-3">Taipei food hot spots</h2>
+          <p className="text-gray-500 leading-relaxed mb-8 max-w-2xl text-sm">
+            These are the specific streets, markets, and pockets of the city that Taipei residents return to again and again — not because they&apos;re famous, but because the food is genuinely good.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              {
+                name: "Yongkang Street",
+                chinese: "永康街",
+                tag: "Food Street",
+                tagColor: "text-terracotta-600 bg-terracotta-50",
+                mrt: "Dongmen (Red/Green) · Exit 5",
+                bestTime: "Lunch and early evening",
+                vibe: "Laid-back, tree-lined, locals and expats mixed",
+                desc: "The single most rewarding street for food in Taipei. A two-block stretch packed with beef noodle soup shops, dumpling restaurants, cold noodles, shaved ice, and bubble tea — all within walking distance of each other. The famous Yongkang Beef Noodles (永康牛肉麵) has operated here for decades.",
+                eat: ["Beef noodle soup 牛肉麵", "Tang yuan 湯圓 (glutinous rice balls)", "Shaved ice 剉冰", "Cold sesame noodles 涼麵"],
+              },
+              {
+                name: "Ningxia Night Market",
+                chinese: "寧夏夜市",
+                tag: "Night Market",
+                tagColor: "text-lantern-600 bg-lantern-50",
+                mrt: "Zhongshan (Red/Green) · 10 min walk",
+                bestTime: "6pm – midnight",
+                vibe: "Local, no-frills, very little English",
+                desc: "If Shilin is the tourist-facing night market, Ningxia is where Taipei residents actually eat. Smaller, denser, and genuinely cheaper. The vendors have been cooking the same things for 20–30 years and it shows. No trendy fusion stalls — just the classics done right.",
+                eat: ["Oyster omelette 蚵仔煎", "Lu rou fan 滷肉飯", "Pork ribs soup 排骨酥湯", "Peanut ice cream wrap 花生捲冰淇淋"],
+              },
+              {
+                name: "Dihua Street",
+                chinese: "迪化街",
+                tag: "Historic Street",
+                tagColor: "text-amber-700 bg-amber-50",
+                mrt: "Daqiaotou (Orange) · 15 min walk",
+                bestTime: "Morning to late afternoon",
+                vibe: "Old-school merchants, beautiful Baroque shophouses, slow pace",
+                desc: "Taipei's oldest commercial street, dating to the Qing dynasty. Originally a trading hub for dried goods and Chinese medicine, it now mixes traditional ingredient shops with specialty tea houses, craft coffee roasters, and afternoon-snack spots. The architecture alone is worth the trip.",
+                eat: ["Dried seafood and mushrooms to take home", "Specialty teas 茶", "Traditional pastries 糕餅", "Sun cakes 太陽餅 at stall vendors"],
+              },
+              {
+                name: "Ximending",
+                chinese: "西門町",
+                tag: "Street Food Hub",
+                tagColor: "text-purple-600 bg-purple-50",
+                mrt: "Ximen (Blue/Green) · Exit 6",
+                bestTime: "Afternoon through late night",
+                vibe: "Youth culture, busy, loud, neon-lit",
+                desc: "Taipei's answer to Harajuku — a pedestrianised zone packed with street food vendors, bubble tea shops, and late-night restaurants. Not the most refined food scene in the city, but excellent for grazing: grab scallion pancake from one cart, move to the next for stinky tofu, finish with a cup of fresh-cut fruit.",
+                eat: ["Scallion pancake 蔥抓餅", "Oyster vermicelli 蚵仔麵線", "Stinky tofu 臭豆腐", "Bubble tea from the original Chun Shui Tang area shops"],
+              },
+              {
+                name: "Tonghua Night Market",
+                chinese: "通化夜市",
+                tag: "Night Market",
+                tagColor: "text-lantern-600 bg-lantern-50",
+                mrt: "Linan St off Tonghua St · Xinyi Anhe (Red)",
+                bestTime: "7pm – 1am",
+                vibe: "Neighbourhood local, younger crowd, less crowded than Shilin",
+                desc: "Also known as Linjiang Night Market, this is the go-to for Taipei residents in the Xinyi and Da'an districts who want a night market without the tourist factor. Dense with good food — the grilled corn stalls here are exceptional, and the braised dishes (滷味) are among the best in the city.",
+                eat: ["Grilled corn 烤玉米", "Braised snacks 滷味", "Coffin bread 棺材板", "Fresh squeezed juice 現榨果汁"],
+              },
+              {
+                name: "Gongguan",
+                chinese: "公館",
+                tag: "Student Area",
+                tagColor: "text-mist-600 bg-mist-50",
+                mrt: "Gongguan (Green) · Exit 3",
+                bestTime: "Lunch and evening",
+                vibe: "Young, cheap, creative — NTU student crowd",
+                desc: "The area around National Taiwan University is Taipei's best-kept cheap-eat secret. The student economy keeps prices extremely low and competition high — which means quality stays up. Mix of traditional Taiwanese, Japanese-style, and Southeast Asian restaurants all within a short walk.",
+                eat: ["Pork chop rice 排骨飯 at local canteens", "Dan bing 蛋餅 (egg crepe) at breakfast stalls", "Shaved ice with taro 芋頭刨冰", "Hot pot (many affordable chains nearby)"],
+              },
+              {
+                name: "Wanhua — Longshan Temple area",
+                chinese: "萬華 · 龍山寺",
+                tag: "Old Taipei",
+                tagColor: "text-gray-600 bg-gray-100",
+                mrt: "Longshan Temple (Blue) · Exit 1",
+                bestTime: "Breakfast and lunch; avoid late night",
+                vibe: "Gritty, authentic, very local — the real old Taipei",
+                desc: "Wanhua is the oldest part of Taipei and has the cheapest, most honest food in the city. The area around Longshan Temple and Huaxi Street is unglamorous but genuinely rewarding — beef offal soups, century-old congee stalls, and rooftop tea houses that haven't changed in 40 years.",
+                eat: ["Beef offal soup 牛雜湯", "Congee 粥 at old-school breakfast spots", "Snake soup 蛇湯 (adventurous)", "Taiwanese-style sashimi at Huaxi St stalls"],
+              },
+              {
+                name: "Xinyi — Department store basements",
+                chinese: "信義區 · 百貨地下美食",
+                tag: "Upscale",
+                tagColor: "text-blue-600 bg-blue-50",
+                mrt: "Taipei City Hall (Blue) · Exit 2",
+                bestTime: "Lunch and dinner",
+                vibe: "Air-conditioned, refined, good for rainy days",
+                desc: "The basement food halls of Xinyi's department stores — ATT 4 Fun, Taipei 101, Breeze Centre, Eslite Spectrum — are some of the best places to eat in the city on a hot or rainy day. Quality is consistently high, the range covers everything from ramen to Cantonese dim sum, and you can sit down properly.",
+                eat: ["Din Tai Fung 鼎泰豐 (the original is in Da'an, but Xinyi has branches)", "Ramen at Japanese chains with Taipei-only menus", "Pastries and bakery items unique to Taiwan chains", "Cold brew specialty coffee at roastery cafés"],
+              },
+            ].map((spot) => (
+              <div key={spot.name} className="border border-gray-100 rounded-2xl p-6 hover:border-gray-200 hover:shadow-sm transition-all duration-150">
+                {/* Header */}
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <div>
+                    <h3 className="font-serif text-lg font-bold text-ink leading-snug">
+                      {spot.name}
+                    </h3>
+                    <p className="text-sm text-ink-muted font-sans">{spot.chinese}</p>
+                  </div>
+                  <span className={`flex-shrink-0 text-[0.65rem] font-semibold uppercase tracking-wider px-2 py-1 rounded-full ${spot.tagColor}`}>
+                    {spot.tag}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-gray-500 leading-relaxed mb-4">{spot.desc}</p>
+
+                {/* Eat here for */}
+                <div className="mb-4">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-gray-400 mb-2">Eat here for</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {spot.eat.map((item) => (
+                      <span key={item} className="text-xs bg-parchment-warm border border-parchment-border text-ink-secondary px-2 py-0.5 rounded-full">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Meta */}
+                <div className="border-t border-gray-100 pt-3 grid grid-cols-2 gap-2 text-[0.7rem] text-gray-400">
+                  <div>
+                    <span className="font-semibold text-gray-500">MRT </span>{spot.mrt}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-500">Best time </span>{spot.bestTime}
+                  </div>
+                  <div className="col-span-2">
+                    <span className="font-semibold text-gray-500">Vibe </span>{spot.vibe}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Taipei MRT */}
         <section className="mb-14">
           <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Getting around</p>
