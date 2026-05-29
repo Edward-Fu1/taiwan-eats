@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import OrnamentDivider from "@/components/OrnamentDivider";
+import TaiwanMascot from "@/components/TaiwanMascot";
 import { featuredArticles } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -299,6 +300,7 @@ export default function HomePage() {
       </div>
 
       <Footer />
+      <TaiwanMascot />
     </main>
   );
 }
