@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
+import OrnamentDivider from "@/components/OrnamentDivider";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
+  const [email, setEmail]     = useState("");
+  const [status, setStatus]   = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -15,9 +16,9 @@ export default function NewsletterSignup() {
 
     try {
       const res = await fetch("/api/subscribe", {
-        method: "POST",
+        method:  "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body:    JSON.stringify({ email }),
       });
 
       if (!res.ok) {
@@ -33,42 +34,76 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <div className="bg-coral-50 border border-coral-100 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div>
-        <p className="text-xs font-medium tracking-widest uppercase text-coral-600 mb-2">Weekly brief</p>
-        <h3 className="font-serif text-xl font-bold mb-1">Get the weekly Taiwan food brief</h3>
-        <p className="text-sm text-gray-500">New restaurants, seasonal dishes, and tips — every Thursday.</p>
-      </div>
+    <section
+      aria-label="Newsletter signup"
+      className="bg-parchment-warm rounded-2xl px-8 py-10 text-center"
+    >
+      <OrnamentDivider className="mb-8" />
+
+      <p className="font-display text-[1.75rem] font-semibold text-ink mb-2 leading-snug">
+        New guides, every week.
+      </p>
+      <p className="text-[0.875rem] font-sans text-ink-secondary mb-7">
+        Restaurants, dishes, and tips — every Thursday. No spam. Unsubscribe anytime.
+      </p>
 
       {status === "success" ? (
-        <p className="text-sm font-medium text-coral-600">You&apos;re in! 🎉 Check your inbox.</p>
+        <p className="inline-flex items-center gap-2 text-[0.875rem] font-sans font-medium text-mist-600 bg-mist-50 px-5 py-3 rounded-lg">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="1 7 5 11 13 3" />
+          </svg>
+          You&apos;re in. Check your inbox.
+        </p>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2 flex-shrink-0">
-          <div className="flex gap-2">
-            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-            <input
-              id="newsletter-email"
-              type="email"
-              required
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={status === "loading"}
-              className="border border-coral-200 bg-white rounded-lg px-4 py-2.5 text-sm w-52 focus:outline-none focus:border-coral-400 focus:ring-1 focus:ring-coral-400 disabled:opacity-50"
-            />
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="bg-coral-600 hover:bg-coral-800 disabled:opacity-60 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors"
-            >
-              {status === "loading" ? "..." : "Subscribe"}
-            </button>
-          </div>
-          {status === "error" && (
-            <p className="text-xs text-red-500">{errorMsg}</p>
-          )}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row gap-2 items-center justify-center max-w-sm mx-auto"
+        >
+          <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+          <input
+            id="newsletter-email"
+            type="email"
+            required
+            placeholder="your@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={status === "loading"}
+            className="
+              flex-1 min-w-0 w-full sm:w-auto
+              border border-parchment-border bg-white rounded-md
+              px-4 py-2.5 text-[0.875rem] font-sans text-ink
+              placeholder:text-ink-muted
+              focus:outline-none focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400
+              disabled:opacity-50
+              transition-colors
+            "
+          />
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="
+              shrink-0 bg-terracotta-500 hover:bg-terracotta-600 disabled:opacity-60
+              text-white text-[0.875rem] font-sans font-medium
+              px-5 py-2.5 rounded-md
+              transition-colors duration-150
+              min-w-[100px]
+            "
+          >
+            {status === "loading" ? "…" : "Subscribe →"}
+          </button>
         </form>
       )}
-    </div>
+
+      {status === "error" && (
+        <p
+          role="alert"
+          className="mt-3 text-[0.8125rem] font-sans text-lantern-600"
+        >
+          {errorMsg}
+        </p>
+      )}
+
+      <OrnamentDivider className="mt-8" />
+    </section>
   );
 }

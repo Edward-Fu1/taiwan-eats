@@ -2,12 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts are loaded via next/font in layout.tsx — no @import needed here */
+/* ── CSS Design Tokens ─────────────────────────────────────── */
+:root {
+  --lantern:        #C03A2B;
+  --terracotta:     #B56B45;
+  --mist:           #4A7860;
+  --jade:           #8CAE9A;
+  --indigo:         #2D3A5C;
+  --gold:           #C9963A;
+  --ink:            #1A1714;
+  --ink-secondary:  #5C5449;
+  --ink-muted:      #9B9086;
+  --parchment:      #FAFAF8;
+  --parchment-warm: #F5EFE6;
+  --border:         #E5DDD4;
+}
 
+/* ── Base ──────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  @apply bg-white text-gray-900 antialiased;
+  background-color: var(--parchment);
+  color: var(--ink);
+}
+
+/* ── Article Typography ────────────────────────────────────── */
+.article-body {
+  font-family: var(--font-lora), Georgia, serif;
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+/* Drop cap — references traditional brush-written texts */
+.article-body > p:first-of-type::first-letter {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 4.5em;
+  font-weight: 600;
+  color: var(--terracotta);
+  float: left;
+  line-height: 0.75;
+  margin-right: 0.12em;
+  margin-top: 0.08em;
+  padding-bottom: 0.05em;
+}
+
+.article-body > p {
+  margin-top: 1.5em;
+}
+
+.article-body > p:first-of-type {
+  margin-top: 0;
+}
+
+/* H2 article section headers */
+.article-h2 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  line-height: 1.2;
+}
+
+/* Pull quote — terracotta left border, Cormorant italic */
+.article-pullquote {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.375rem;
+  font-style: italic;
+  color: var(--ink-secondary);
+  border-left: 3px solid var(--terracotta);
+  padding: 0.375rem 0 0.375rem 1.5rem;
+  margin: 2.25rem 0;
+}
+
+/* Tip / info box — mist green, referencing mountain nature */
+.article-tip {
+  background-color: #EEF6F1;
+  border-left: 3px solid var(--mist);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.article-tip-label {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Category chips ────────────────────────────────────────── */
+.cat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Reading progress bar ──────────────────────────────────── */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--lantern);
+  z-index: 9999;
+  transition: width 80ms linear;
+  pointer-events: none;
+  will-change: width;
+}
+
+/* ── Focus rings ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: 3px;
 }

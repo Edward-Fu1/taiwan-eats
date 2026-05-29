@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Lora, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+// Display headings, logotype, pull quotes — calligraphic quality, editorial elegance
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-dm-sans",
+  weight: ["300", "400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
 });
 
-const playfair = Playfair_Display({
+// Article body text — warm, humanist serif ideal for long-form reading
+const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
-  variable: "--font-playfair",
+  variable: "--font-lora",
+  display: "swap",
+});
+
+// UI, labels, captions, nav — clean humanist sans with warm personality
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-jakarta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -61,7 +74,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${playfair.variable} font-sans`}>
+      <body className={`${cormorant.variable} ${lora.variable} ${jakarta.variable} font-sans bg-parchment text-ink antialiased`}>
         {children}
       </body>
     </html>
