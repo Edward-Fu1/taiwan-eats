@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata = {
-  title: "Experiences — TaiwanEats",
-  description: "Food tours, cooking classes, and hands-on experiences in Taiwan.",
+  title: "Taiwan Food Tours & Cooking Classes",
+  description:
+    "Curated food tours, cooking classes, and market walks across Taiwan. Expert-led experiences in Taipei, Tainan, and beyond — all personally vetted by our team.",
+  alternates: { canonical: "/experiences" },
 };
 
 export default function ExperiencesPage() {

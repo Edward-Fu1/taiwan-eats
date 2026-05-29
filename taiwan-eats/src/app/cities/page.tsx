@@ -2,15 +2,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { cities } from "@/lib/data";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = {
-  title: "City Guides — TaiwanEats",
-  description: "Food guides for every major city in Taiwan.",
+  title: "Taiwan City Food Guides — Taipei, Tainan, Kaohsiung & More",
+  description:
+    "In-depth food guides for every major Taiwanese city — where to eat in Taipei, Tainan, Kaohsiung, and Taichung, from street stalls to famous restaurants.",
+  alternates: { canonical: "/cities" },
 };
 
 export default function CitiesPage() {
   return (
     <main>
+      <BreadcrumbSchema items={[{ name: "City Guides", href: "/cities" }]} />
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
         <h1 className="font-serif text-4xl font-bold mb-2">City guides</h1>

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const dishes = [
   { tag: "Noodles", title: "The best beef noodle soup in Taipei — ranked and mapped", readTime: "8 min read", location: "Taipei", emoji: "🍜", href: "/dishes/beef-noodle-soup-taipei", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/noodle-soup/800/400" },
@@ -12,13 +13,16 @@ const dishes = [
 ];
 
 export const metadata = {
-  title: "Dish Guides — TaiwanEats",
-  description: "Deep-dive guides to Taiwan's most iconic dishes.",
+  title: "Taiwan Dish Guides — Beef Noodle, Bubble Tea & More",
+  description:
+    "Detailed guides to Taiwan's most iconic dishes — beef noodle soup, bubble tea, scallion pancakes, oyster vermicelli, and more. Find your next obsession.",
+  alternates: { canonical: "/dishes" },
 };
 
 export default function DishesPage() {
   return (
     <main>
+      <BreadcrumbSchema items={[{ name: "Dish Guides", href: "/dishes" }]} />
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
         <h1 className="font-serif text-4xl font-bold mb-2">Dish guides</h1>

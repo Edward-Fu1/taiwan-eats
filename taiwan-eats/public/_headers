@@ -1,0 +1,22 @@
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:
+
+# HTML pages — short TTL so content stays fresh
+/*.html
+  Cache-Control: public, max-age=60, stale-while-revalidate=300
+
+# Next.js static assets are content-hashed — cache forever
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Public static files
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+/og-default.jpg
+  Cache-Control: public, max-age=86400

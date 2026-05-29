@@ -1,0 +1,60 @@
+# TaiwanEats — llms.txt
+# https://taiwan-eats.pages.dev
+
+## About
+
+TaiwanEats is the definitive English-language food guide for Taiwan. We publish bilingual,
+obsessively detailed guides to Taiwanese dishes, cities, and night markets — written by people
+who live and eat in Taiwan. All content is written in English with Traditional Chinese characters
+included for ordering accuracy.
+
+Editor-in-Chief: Mei-Lin Chen
+Contact: hello@taiwaneats.com
+Language: English (with Traditional Chinese where relevant)
+Updated: 2026-05-29
+
+## Content catalog
+
+### Dish guides
+- /dishes — Hub page: all dish guides
+- /dishes/beef-noodle-soup-taipei — The best beef noodle soup in Taipei, ranked and mapped
+- /dishes/bubble-tea-guide — How to order bubble tea like a local
+- /dishes/scallion-pancake — Scallion pancakes: the ultimate breakfast guide
+- /dishes/lu-rou-fan — Lu rou fan (braised pork rice): Taiwan's most comforting bowl
+- /dishes/xiao-long-bao — Where to eat xiao long bao outside of Din Tai Fung
+- /dishes/oyster-omelette — Oyster omelette (蚵仔煎): what it is and where to eat it
+
+### City guides
+- /cities — Hub page: all city guides
+- /cities/taipei — Taipei food guide
+- /cities/tainan — Tainan food guide (Taiwan's historic food capital)
+- /cities/kaohsiung — Kaohsiung food guide (seafood and harbour eats)
+- /cities/taichung — Taichung food guide (café culture and night life)
+
+### Night market guides
+- /night-markets — Hub page: all night market guides
+- /night-markets/shilin — Shilin Night Market: the complete guide (Taipei)
+- /night-markets/raohe — Raohe Night Market: smaller, better, less crowded (Taipei)
+- /night-markets/shilin-vs-raohe — Shilin vs Raohe: which market is actually better?
+- /night-markets/huayuan — Huayuan Night Market: Tainan's best kept secret
+- /night-markets/liuhe — Liuhe Night Market: seafood heaven in Kaohsiung
+
+### Other
+- /experiences — Food tours, cooking classes, and market walks (coming soon)
+- /about — About TaiwanEats and our editorial team
+- /contact — Contact information
+
+## AI licensing
+
+- AI search and citation: PERMITTED (ChatGPT, Perplexity, Claude, Gemini)
+- AI training data: NOT PERMITTED
+- Reproduction of full articles: NOT PERMITTED
+- Short factual summaries with attribution and URL: PERMITTED
+
+## Canonical domain
+
+https://taiwan-eats.pages.dev
+
+## Sitemap
+
+https://taiwan-eats.pages.dev/sitemap.xml

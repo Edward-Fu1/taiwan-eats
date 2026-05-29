@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const markets = [
   { tag: "Taipei", title: "Shilin Night Market: the complete guide", readTime: "10 min read", location: "Taipei", emoji: "🌙", href: "/night-markets/shilin", bgColor: "bg-blue-50", image: "https://picsum.photos/seed/shilin-night/800/400" },
@@ -10,13 +11,16 @@ const markets = [
 ];
 
 export const metadata = {
-  title: "Night Market Guides — TaiwanEats",
-  description: "Everything you need to know about Taiwan's famous night markets.",
+  title: "Taiwan Night Market Guide — Shilin, Raohe & Beyond",
+  description:
+    "Complete guides to Taiwan's best night markets — Shilin, Raohe, Huayuan, and Liuhe. What to eat, when to go, and how to navigate like a local.",
+  alternates: { canonical: "/night-markets" },
 };
 
 export default function NightMarketsPage() {
   return (
     <main>
+      <BreadcrumbSchema items={[{ name: "Night Markets", href: "/night-markets" }]} />
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
         <h1 className="font-serif text-4xl font-bold mb-2">Night markets</h1>

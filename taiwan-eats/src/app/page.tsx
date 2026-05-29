@@ -1,14 +1,58 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { categories, featuredArticles, cities } from "@/lib/data";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://taiwan-eats.pages.dev/#organization",
+      name: "TaiwanEats",
+      url: "https://taiwan-eats.pages.dev",
+      description:
+        "Bilingual, honest, and obsessively detailed food guides for Taiwan.",
+      inLanguage: "en",
+      email: "hello@taiwaneats.com",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://taiwan-eats.pages.dev/#website",
+      url: "https://taiwan-eats.pages.dev",
+      name: "TaiwanEats",
+      description:
+        "Your guide to eating extraordinary in Taiwan — dishes, cities, and night markets.",
+      publisher: { "@id": "https://taiwan-eats.pages.dev/#organization" },
+      inLanguage: "en",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate:
+            "https://taiwan-eats.pages.dev/dishes?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <Navbar />
 
       <div className="max-w-5xl mx-auto px-6">
