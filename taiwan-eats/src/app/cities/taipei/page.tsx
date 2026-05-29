@@ -130,6 +130,7 @@ export default function TaipeiPage() {
             <Link href="/night-markets/raohe" className="bg-coral-50 text-coral-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">🏮 Raohe Night Market</Link>
             <Link href="/dishes/beef-noodle-soup-taipei" className="bg-amber-50 text-amber-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">🍜 Best Beef Noodle Soup</Link>
             <Link href="/dishes/xiao-long-bao" className="bg-green-50 text-green-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">🥟 Xiao Long Bao Guide</Link>
+            <Link href="/cities/taipei/airport-to-taipei" className="bg-mist-50 text-mist-600 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">🚆 Airport → Taipei Main</Link>
           </div>
         </section>
 
