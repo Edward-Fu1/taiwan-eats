@@ -15,7 +15,7 @@ export const featuredArticles = [
     emoji: "🍜",
     href: "/dishes/beef-noodle-soup-taipei",
     bgColor: "bg-coral-50",
-    image: "https://images.unsplash.com/photo-1631709497146-a239ef373cf1?w=800&h=400&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1578304140490-dfbd0245605e?w=800&h=400&auto=format&fit=crop&q=80",
     large: true,
   },
   {
@@ -25,7 +25,7 @@ export const featuredArticles = [
     emoji: "🧋",
     href: "/dishes/bubble-tea-guide",
     bgColor: "bg-amber-50",
-    image: "https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=800&h=400&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1525803377221-4f6ccdaa5133?w=800&h=400&auto=format&fit=crop&q=80",
   },
   {
     tag: "Night Market",
@@ -34,7 +34,7 @@ export const featuredArticles = [
     emoji: "🌙",
     href: "/night-markets/shilin-vs-raohe",
     bgColor: "bg-blue-50",
-    image: "https://images.unsplash.com/photo-1698567045771-a22c872c26fa?w=800&h=400&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1585581842747-88870a42f144?w=800&h=400&auto=format&fit=crop&q=80",
   },
 ];
 
