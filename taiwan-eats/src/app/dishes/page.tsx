@@ -4,12 +4,12 @@ import ArticleCard from "@/components/ArticleCard";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const dishes = [
-  { tag: "Noodles", title: "The best beef noodle soup in Taipei — ranked and mapped", readTime: "8 min read", location: "Taipei", emoji: "🍜", href: "/dishes/beef-noodle-soup-taipei", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/noodle-soup/800/400" },
-  { tag: "Drinks", title: "Ordering bubble tea like a local", readTime: "5 min read", emoji: "🧋", href: "/dishes/bubble-tea-guide", bgColor: "bg-amber-50", image: "https://picsum.photos/seed/bubble-drink/800/400" },
-  { tag: "Street Food", title: "Scallion pancakes: the ultimate breakfast guide", readTime: "4 min read", emoji: "🥞", href: "/dishes/scallion-pancake", bgColor: "bg-green-50", image: "https://picsum.photos/seed/breakfast-street/800/400" },
-  { tag: "Rice", title: "Lu rou fan: Taiwan's most comforting bowl", readTime: "6 min read", emoji: "🍱", href: "/dishes/lu-rou-fan", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/braised-pork/800/400" },
-  { tag: "Dumplings", title: "Where to eat xiao long bao outside of Din Tai Fung", readTime: "7 min read", location: "Taipei", emoji: "🥟", href: "/dishes/xiao-long-bao", bgColor: "bg-blue-50", image: "https://picsum.photos/seed/dumpling-steam/800/400" },
-  { tag: "Seafood", title: "Oyster omelette: what it is and where to eat it", readTime: "5 min read", emoji: "🦪", href: "/dishes/oyster-omelette", bgColor: "bg-amber-50", image: "https://picsum.photos/seed/oyster-egg/800/400" },
+  { tag: "Noodles", title: "The best beef noodle soup in Taipei — ranked and mapped", readTime: "8 min read", location: "Taipei", emoji: "🍜", href: "/dishes/beef-noodle-soup-taipei", bgColor: "bg-coral-50", image: "https://images.unsplash.com/photo-1631709497146-a239ef373cf1?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Drinks", title: "Ordering bubble tea like a local", readTime: "5 min read", emoji: "🧋", href: "/dishes/bubble-tea-guide", bgColor: "bg-amber-50", image: "https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Street Food", title: "Scallion pancakes: the ultimate breakfast guide", readTime: "4 min read", emoji: "🥞", href: "/dishes/scallion-pancake", bgColor: "bg-green-50", image: "https://images.unsplash.com/photo-1755742185654-da9810c73431?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Rice", title: "Lu rou fan: Taiwan's most comforting bowl", readTime: "6 min read", emoji: "🍱", href: "/dishes/lu-rou-fan", bgColor: "bg-coral-50", image: "https://images.unsplash.com/premium_photo-1712849058524-7f5e94474fe6?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Dumplings", title: "Where to eat xiao long bao outside of Din Tai Fung", readTime: "7 min read", location: "Taipei", emoji: "🥟", href: "/dishes/xiao-long-bao", bgColor: "bg-blue-50", image: "https://images.unsplash.com/photo-1678026582164-24a5460c447a?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Seafood", title: "Oyster omelette: what it is and where to eat it", readTime: "5 min read", emoji: "🦪", href: "/dishes/oyster-omelette", bgColor: "bg-amber-50", image: "https://images.unsplash.com/photo-1761624780913-c523590ca6fa?w=800&h=400&auto=format&fit=crop&q=80" },
 ];
 
 export const metadata = {

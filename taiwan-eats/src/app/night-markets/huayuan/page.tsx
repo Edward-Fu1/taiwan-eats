@@ -26,13 +26,13 @@ export default function HuayuanPage() {
         description="The night market Tainan locals actually go to. A guide to Huayuan — the food, the stalls, and why it beats every Taipei market on price-to-quality ratio."
         url="/night-markets/huayuan"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/huayuan-tainan/1200/630"
+        image="https://images.unsplash.com/photo-1698563874316-c53d7493c04c?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://picsum.photos/seed/huayuan-tainan/1200/600" alt="Huayuan Night Market" fill className="object-cover" priority />
+          <Image src="https://images.unsplash.com/photo-1698563874316-c53d7493c04c?w=1200&h=600&auto=format&fit=crop&q=80" alt="Huayuan Night Market" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </div>
 

@@ -15,6 +15,16 @@ const nextConfig = {
         protocol: "https",
         hostname: "picsum.photos",
       },
+      {
+        // Free Unsplash photos CDN
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        // Unsplash+ premium photos CDN
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+      },
     ],
   },
 };

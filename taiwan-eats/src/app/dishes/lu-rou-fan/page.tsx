@@ -26,13 +26,13 @@ export default function LuRouFanPage() {
         description="Braised pork rice — Taiwan's ultimate comfort food. The history, the best spots across the island, and why every version tastes different."
         url="/dishes/lu-rou-fan"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/braised-pork/1200/630"
+        image="https://images.unsplash.com/premium_photo-1712849058524-7f5e94474fe6?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://picsum.photos/seed/braised-pork/1200/600" alt="Lu rou fan" fill className="object-cover" priority />
+          <Image src="https://images.unsplash.com/premium_photo-1712849058524-7f5e94474fe6?w=1200&h=600&auto=format&fit=crop&q=80" alt="Lu rou fan" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
 

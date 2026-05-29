@@ -35,13 +35,13 @@ export default function BubbleTeaGuidePage() {
         description="A complete guide to ordering bubble tea in Taiwan — sweetness levels, ice levels, and the brands worth the queue. Everything you need to know before you order."
         url="/dishes/bubble-tea-guide"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/bubble-drink/1200/630"
+        image="https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://picsum.photos/seed/bubble-drink/1200/600" alt="Bubble tea" fill className="object-cover" priority />
+          <Image src="https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=1200&h=600&auto=format&fit=crop&q=80" alt="Bubble tea" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
 

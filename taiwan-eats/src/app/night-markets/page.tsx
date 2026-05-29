@@ -4,11 +4,11 @@ import ArticleCard from "@/components/ArticleCard";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const markets = [
-  { tag: "Taipei", title: "Shilin Night Market: the complete guide", readTime: "10 min read", location: "Taipei", emoji: "🌙", href: "/night-markets/shilin", bgColor: "bg-blue-50", image: "https://picsum.photos/seed/shilin-night/800/400" },
-  { tag: "Taipei", title: "Raohe Night Market: smaller, better, less crowded", readTime: "7 min read", location: "Taipei", emoji: "🏮", href: "/night-markets/raohe", bgColor: "bg-coral-50", image: "https://picsum.photos/seed/raohe-market/800/400" },
-  { tag: "Comparison", title: "Shilin vs Raohe: which market is actually better?", readTime: "4 min read", location: "Taipei", emoji: "⚖️", href: "/night-markets/shilin-vs-raohe", bgColor: "bg-purple-50", image: "https://picsum.photos/seed/market-compare/800/400" },
-  { tag: "Tainan", title: "Huayuan Night Market: Tainan's best kept secret", readTime: "6 min read", location: "Tainan", emoji: "🌟", href: "/night-markets/huayuan", bgColor: "bg-amber-50", image: "https://picsum.photos/seed/huayuan-tainan/800/400" },
-  { tag: "Kaohsiung", title: "Liuhe Night Market: seafood heaven in Kaohsiung", readTime: "8 min read", location: "Kaohsiung", emoji: "🦐", href: "/night-markets/liuhe", bgColor: "bg-green-50", image: "https://picsum.photos/seed/liuhe-seafood/800/400" },
+  { tag: "Taipei", title: "Shilin Night Market: the complete guide", readTime: "10 min read", location: "Taipei", emoji: "🌙", href: "/night-markets/shilin", bgColor: "bg-blue-50", image: "https://images.unsplash.com/photo-1698567045771-a22c872c26fa?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Taipei", title: "Raohe Night Market: smaller, better, less crowded", readTime: "7 min read", location: "Taipei", emoji: "🏮", href: "/night-markets/raohe", bgColor: "bg-coral-50", image: "https://images.unsplash.com/photo-1613019435367-6adf98fb2e44?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Comparison", title: "Shilin vs Raohe: which market is actually better?", readTime: "4 min read", location: "Taipei", emoji: "⚖️", href: "/night-markets/shilin-vs-raohe", bgColor: "bg-purple-50", image: "https://images.unsplash.com/photo-1640698706443-80c6485f277d?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Tainan", title: "Huayuan Night Market: Tainan's best kept secret", readTime: "6 min read", location: "Tainan", emoji: "🌟", href: "/night-markets/huayuan", bgColor: "bg-amber-50", image: "https://images.unsplash.com/photo-1698563874316-c53d7493c04c?w=800&h=400&auto=format&fit=crop&q=80" },
+  { tag: "Kaohsiung", title: "Liuhe Night Market: seafood heaven in Kaohsiung", readTime: "8 min read", location: "Kaohsiung", emoji: "🦐", href: "/night-markets/liuhe", bgColor: "bg-green-50", image: "https://images.unsplash.com/photo-1743195954972-e623ada54ab2?w=800&h=400&auto=format&fit=crop&q=80" },
 ];
 
 export const metadata = {

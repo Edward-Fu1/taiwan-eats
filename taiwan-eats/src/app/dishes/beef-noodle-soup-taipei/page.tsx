@@ -121,7 +121,7 @@ export default function BeefNoodleSoupPage() {
         description="We ate at 12 beef noodle soup spots across Taipei so you don't have to. Here's who won — with neighborhoods, prices, and exactly what to order."
         url="/dishes/beef-noodle-soup-taipei"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/noodle-soup/1200/630"
+        image="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?w=1200&h=630&auto=format&fit=crop&q=80"
       />
 
       <Navbar />
@@ -169,7 +169,7 @@ export default function BeefNoodleSoupPage() {
       <div className="max-w-4xl mx-auto px-6 mb-14">
         <div className="relative w-full aspect-[16/9] rounded-[10px] overflow-hidden shadow-[0_4px_24px_rgba(26,23,20,0.10)]">
           <Image
-            src="https://picsum.photos/seed/noodle-soup/1200/600"
+            src="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?w=1200&h=600&auto=format&fit=crop&q=80"
             alt="A bowl of Taiwanese beef noodle soup — the clear broth style at Lin Dong Fang"
             fill
             className="object-cover"

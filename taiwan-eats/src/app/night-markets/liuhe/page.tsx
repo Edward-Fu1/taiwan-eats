@@ -26,13 +26,13 @@ export default function LiuhePage() {
         description="Kaohsiung's most famous night market and the best place in Taiwan to eat fresh seafood outdoors. What to order, what to avoid, and when to go."
         url="/night-markets/liuhe"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/liuhe-seafood/1200/630"
+        image="https://images.unsplash.com/photo-1743195954972-e623ada54ab2?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://picsum.photos/seed/liuhe-seafood/1200/600" alt="Liuhe Night Market" fill className="object-cover" priority />
+          <Image src="https://images.unsplash.com/photo-1743195954972-e623ada54ab2?w=1200&h=600&auto=format&fit=crop&q=80" alt="Liuhe Night Market" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </div>
 

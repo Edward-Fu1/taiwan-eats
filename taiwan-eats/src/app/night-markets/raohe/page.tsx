@@ -26,13 +26,13 @@ export default function RaohePage() {
         description="Why Taipei locals prefer Raohe over Shilin — a guide to the compact night market that punches above its weight on food quality."
         url="/night-markets/raohe"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/raohe-market/1200/630"
+        image="https://images.unsplash.com/photo-1613019435367-6adf98fb2e44?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://picsum.photos/seed/raohe-market/1200/600" alt="Raohe Night Market" fill className="object-cover" priority />
+          <Image src="https://images.unsplash.com/photo-1613019435367-6adf98fb2e44?w=1200&h=600&auto=format&fit=crop&q=80" alt="Raohe Night Market" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </div>
 

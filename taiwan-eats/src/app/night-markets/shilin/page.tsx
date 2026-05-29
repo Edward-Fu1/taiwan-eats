@@ -150,13 +150,13 @@ export default function ShilinPage() {
         description="Everything you need to know about Taipei's most famous night market — what to eat, what to skip, and how to navigate the crowd like a regular."
         url="/night-markets/shilin"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/shilin-night/1200/630"
+        image="https://images.unsplash.com/photo-1698567045771-a22c872c26fa?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://picsum.photos/seed/shilin-market/1200/600" alt="Shilin Night Market Taipei" fill className="object-cover" priority />
+          <Image src="https://images.unsplash.com/photo-1698567045771-a22c872c26fa?w=1200&h=600&auto=format&fit=crop&q=80" alt="Shilin Night Market Taipei" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </div>
 

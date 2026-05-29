@@ -35,14 +35,14 @@ export default function KaohsiungPage() {
         description="Taiwan's second city and its best seafood. A guide to eating in Kaohsiung — from Liuhe Night Market to the harbour restaurants most visitors miss."
         url="/cities/kaohsiung"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/kaohsiung-port/1200/630"
+        image="https://images.unsplash.com/photo-1729347402512-0ef428731e36?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
 
         <section className="mb-14">
           <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-            <Image src="https://picsum.photos/seed/kaohsiung-harbor/1200/600" alt="Kaohsiung" fill className="object-cover" priority />
+            <Image src="https://images.unsplash.com/photo-1729347402512-0ef428731e36?w=1200&h=600&auto=format&fit=crop&q=80" alt="Kaohsiung" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
           <span className="inline-block text-xs font-medium tracking-widest uppercase text-amber-600 bg-amber-50 px-3 py-1 rounded-lg mb-4">

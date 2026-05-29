@@ -42,7 +42,7 @@ export default function TaipeiPage() {
         description="Where to eat in Taipei — from beef noodle soup to xiao long bao to the best night markets. A deep-dive guide written by people who live here."
         url="/cities/taipei"
         datePublished="2026-05-29"
-        image="https://picsum.photos/seed/taipei-city/1200/630"
+        image="https://plus.unsplash.com/premium_photo-1661963920742-f5b23a6a1b44?w=1200&h=630&auto=format&fit=crop&q=80"
       />
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
@@ -50,7 +50,7 @@ export default function TaipeiPage() {
         {/* Hero */}
         <section className="mb-14">
           <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-            <Image src="https://picsum.photos/seed/taipei-city/1200/600" alt="Taipei" fill className="object-cover" priority />
+            <Image src="https://plus.unsplash.com/premium_photo-1661963920742-f5b23a6a1b44?w=1200&h=600&auto=format&fit=crop&q=80" alt="Taipei" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
           <span className="inline-block text-xs font-medium tracking-widest uppercase text-blue-600 bg-blue-50 px-3 py-1 rounded-lg mb-4">
