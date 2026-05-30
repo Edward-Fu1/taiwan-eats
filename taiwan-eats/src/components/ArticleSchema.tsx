@@ -1,4 +1,4 @@
-const BASE_URL = "https://taiwan-eats.pages.dev";
+const BASE_URL = "https://taiwan-trip-advice.pages.dev";
 
 interface ArticleSchemaProps {
   headline: string;

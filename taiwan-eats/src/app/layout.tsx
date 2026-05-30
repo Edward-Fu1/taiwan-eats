@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Lora, Plus_Jakarta_Sans } from "next/font/google";
 import { getLocale } from "next-intl/server";
@@ -30,7 +32,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://taiwan-eats.pages.dev"),
+  metadataBase: new URL("https://taiwan-trip-advice.pages.dev"),
   title: {
     default: "Taiwan Trip Advice — Your Complete Guide to Taiwan",
     template: "%s | Taiwan Trip Advice",
