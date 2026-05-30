@@ -16,6 +16,7 @@ export default function Navbar() {
     { href: "/dishes",        label: t("dishes") },
     { href: "/night-markets", label: t("nightMarkets") },
     { href: "/cities",        label: t("cities") },
+    { href: "/transport",     label: t("transport") },
     { href: "/about",         label: t("about") },
   ];
 
