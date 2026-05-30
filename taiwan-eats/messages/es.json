@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "dishes": "Platos",
+    "nightMarkets": "Mercados Nocturnos",
+    "cities": "Ciudades",
+    "about": "Acerca de",
+    "subscribe": "Suscríbete al boletín semanal →",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "tagline": "TaiwanEats · La guía definitiva de comida de Taiwán"
+  },
+  "home": {
+    "eyebrow": "La guía definitiva de comida de Taiwán",
+    "headline": "Tu guía para comer",
+    "headlineHighlight": "extraordinario",
+    "headlineSuffix": "en Taiwán",
+    "deck": "Bilingüe, honesta y obsesivamente detallada. Desde los clásicos de los mercados nocturnos hasta los platos regionales que la mayoría de visitantes nunca encuentran.",
+    "ctaDishes": "Explorar platos",
+    "ctaCities": "Ver por ciudad",
+    "featuredEyebrow": "Lecturas destacadas",
+    "featuredHeading": "Dónde comer ahora mismo",
+    "allGuides": "Todas las guías →",
+    "browseEyebrow": "Explorar por categoría",
+    "citiesEyebrow": "Explorar por ciudad",
+    "citiesHeading": "Elige tu próximo destino",
+    "allCities": "Todas las ciudades →"
+  },
+  "categories": {
+    "dishesLabel": "Guías de Platos",
+    "dishesTagline": "De fideos de res al té de burbujas",
+    "nightMarketsLabel": "Mercados Nocturnos",
+    "nightMarketsTagline": "Shilin, Raohe y más",
+    "citiesLabel": "Guías de Ciudades",
+    "citiesTagline": "Taipéi, Tainan, Kaohsiung",
+    "experiencesLabel": "Experiencias",
+    "experiencesTagline": "Tours gastronómicos y clases de cocina"
+  },
+  "cities": {
+    "taipeiTagline": "La capital del buen comer",
+    "tainanTagline": "La verdadera capital gastronómica de Taiwán",
+    "taichungTagline": "Cultura de cafés y vida nocturna",
+    "kaohsiungTagline": "Mariscos y cocina del puerto"
+  },
+  "footer": {
+    "brandTagline": "La guía definitiva de comida de Taiwán en inglés — bilingüe, honesta y obsesivamente detallada.",
+    "explore": "Explorar",
+    "info": "Info",
+    "latest": "Últimas",
+    "exploreLinks": {
+      "dishes": "Guías de Platos",
+      "nightMarkets": "Mercados Nocturnos",
+      "cities": "Guías de Ciudades",
+      "experiences": "Experiencias"
+    },
+    "infoLinks": {
+      "about": "Acerca de",
+      "writeForUs": "Escribe para nosotros",
+      "advertise": "Publicidad",
+      "contact": "Contacto",
+      "privacy": "Privacidad"
+    },
+    "latestLinks": {
+      "beefNoodle": "Mejor sopa de fideos de res en Taipéi — clasificadas",
+      "shilin": "Mercado Nocturno Shilin: la guía completa",
+      "bubbleTea": "Cómo pedir bubble tea como un local"
+    },
+    "copyright": "© {year} TaiwanEats",
+    "writtenBy": "Escrito por personas que comen en Taiwán"
+  },
+  "common": {
+    "recommended": "Recomendado",
+    "travelGuide": "Guía de Viaje",
+    "cityGuides": "Guías de Ciudades",
+    "readMore": "Leer más →",
+    "back": "Volver"
+  },
+  "language": {
+    "switchTo": "Cambiar idioma",
+    "en": "EN",
+    "ko": "한국어",
+    "ja": "日本語",
+    "es": "ES"
+  }
+}

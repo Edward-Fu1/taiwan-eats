@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "dishes": "음식",
+    "nightMarkets": "야시장",
+    "cities": "도시",
+    "about": "소개",
+    "subscribe": "주간 뉴스레터 구독하기 →",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기",
+    "tagline": "TaiwanEats · 대만 음식 완벽 가이드"
+  },
+  "home": {
+    "eyebrow": "대만 음식 완벽 가이드",
+    "headline": "대만에서 특별한 음식을",
+    "headlineHighlight": "발견하는",
+    "headlineSuffix": "여행 가이드",
+    "deck": "이중 언어, 솔직하고 세심하게. 야시장 명물부터 여행객들이 잘 모르는 지역 음식까지.",
+    "ctaDishes": "음식 탐색하기",
+    "ctaCities": "도시별로 보기",
+    "featuredEyebrow": "추천 읽을거리",
+    "featuredHeading": "지금 먹으러 가야 할 곳",
+    "allGuides": "모든 가이드 →",
+    "browseEyebrow": "카테고리별 탐색",
+    "citiesEyebrow": "도시별 탐색",
+    "citiesHeading": "다음 여행지를 선택하세요",
+    "allCities": "모든 도시 →"
+  },
+  "categories": {
+    "dishesLabel": "음식 가이드",
+    "dishesTagline": "소고기 면부터 버블티까지",
+    "nightMarketsLabel": "야시장",
+    "nightMarketsTagline": "스린, 라오허 그리고 더 많은 곳",
+    "citiesLabel": "도시 가이드",
+    "citiesTagline": "타이베이, 타이난, 가오슝",
+    "experiencesLabel": "체험",
+    "experiencesTagline": "푸드 투어 & 요리 교실"
+  },
+  "cities": {
+    "taipeiTagline": "맛있게 먹는 수도",
+    "tainanTagline": "대만의 진정한 음식 수도",
+    "taichungTagline": "카페 문화와 나이트라이프",
+    "kaohsiungTagline": "해산물과 항구 음식"
+  },
+  "footer": {
+    "brandTagline": "대만 음식 완벽 가이드 — 이중 언어, 솔직하고 세심하게.",
+    "explore": "탐색",
+    "info": "정보",
+    "latest": "최신",
+    "exploreLinks": {
+      "dishes": "음식 가이드",
+      "nightMarkets": "야시장",
+      "cities": "도시 가이드",
+      "experiences": "체험"
+    },
+    "infoLinks": {
+      "about": "소개",
+      "writeForUs": "기고하기",
+      "advertise": "광고",
+      "contact": "연락처",
+      "privacy": "개인정보"
+    },
+    "latestLinks": {
+      "beefNoodle": "타이베이 최고의 소고기 면 — 순위",
+      "shilin": "스린 야시장: 완벽 가이드",
+      "bubbleTea": "현지인처럼 버블티 주문하는 법"
+    },
+    "copyright": "© {year} TaiwanEats",
+    "writtenBy": "대만에서 먹는 사람들이 씁니다"
+  },
+  "common": {
+    "recommended": "추천",
+    "travelGuide": "여행 가이드",
+    "cityGuides": "도시 가이드",
+    "readMore": "더 읽기 →",
+    "back": "뒤로"
+  },
+  "language": {
+    "switchTo": "언어 변경",
+    "en": "EN",
+    "ko": "한국어",
+    "ja": "日本語",
+    "es": "ES"
+  }
+}

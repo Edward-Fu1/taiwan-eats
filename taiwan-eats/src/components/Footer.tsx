@@ -1,27 +1,30 @@
 import Link from "next/link";
-
-const exploreLinks = [
-  { href: "/dishes",        label: "Dish Guides" },
-  { href: "/night-markets", label: "Night Markets" },
-  { href: "/cities",        label: "City Guides" },
-  { href: "/experiences",   label: "Experiences" },
-];
-
-const infoLinks = [
-  { href: "/about",         label: "About us" },
-  { href: "/write-for-us",  label: "Write for us" },
-  { href: "/advertise",     label: "Advertise" },
-  { href: "/contact",       label: "Contact" },
-  { href: "/privacy",       label: "Privacy" },
-];
-
-const latestLinks = [
-  { href: "/dishes/beef-noodle-soup-taipei", label: "Best beef noodle soup in Taipei — ranked" },
-  { href: "/night-markets/shilin",           label: "Shilin Night Market: the complete guide" },
-  { href: "/dishes/bubble-tea-guide",        label: "How to order bubble tea like a local" },
-];
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
+  const exploreLinks = [
+    { href: "/dishes",        key: "dishes" },
+    { href: "/night-markets", key: "nightMarkets" },
+    { href: "/cities",        key: "cities" },
+    { href: "/experiences",   key: "experiences" },
+  ] as const;
+
+  const infoLinks = [
+    { href: "/about",         key: "about" },
+    { href: "/write-for-us",  key: "writeForUs" },
+    { href: "/advertise",     key: "advertise" },
+    { href: "/contact",       key: "contact" },
+    { href: "/privacy",       key: "privacy" },
+  ] as const;
+
+  const latestLinks = [
+    { href: "/dishes/beef-noodle-soup-taipei", key: "beefNoodle" },
+    { href: "/night-markets/shilin",           key: "shilin" },
+    { href: "/dishes/bubble-tea-guide",        key: "bubbleTea" },
+  ] as const;
+
   return (
     <footer className="bg-tw-indigo-600 mt-24">
       {/* Ornamental top border */}
@@ -48,7 +51,7 @@ export default function Footer() {
               Taiwan<span className="text-jade-500">Eats</span>
             </Link>
             <p className="text-xs text-ink-light/60 font-sans leading-relaxed mb-5">
-              The definitive English-language food guide for Taiwan — bilingual, honest, and obsessively detailed.
+              {t("brandTagline")}
             </p>
             <a
               href="https://instagram.com"
@@ -69,7 +72,7 @@ export default function Footer() {
           {/* Col 2 — Explore */}
           <div>
             <p className="text-[0.6875rem] font-sans font-semibold uppercase tracking-[0.08em] text-jade-500 mb-4">
-              Explore
+              {t("explore")}
             </p>
             <ul className="space-y-2.5">
               {exploreLinks.map((l) => (
@@ -78,7 +81,7 @@ export default function Footer() {
                     href={l.href}
                     className="text-[0.8125rem] font-sans text-ink-light/70 hover:text-parchment transition-colors"
                   >
-                    {l.label}
+                    {t(`exploreLinks.${l.key}`)}
                   </Link>
                 </li>
               ))}
@@ -88,7 +91,7 @@ export default function Footer() {
           {/* Col 3 — Info */}
           <div>
             <p className="text-[0.6875rem] font-sans font-semibold uppercase tracking-[0.08em] text-jade-500 mb-4">
-              Info
+              {t("info")}
             </p>
             <ul className="space-y-2.5">
               {infoLinks.map((l) => (
@@ -97,7 +100,7 @@ export default function Footer() {
                     href={l.href}
                     className="text-[0.8125rem] font-sans text-ink-light/70 hover:text-parchment transition-colors"
                   >
-                    {l.label}
+                    {t(`infoLinks.${l.key}`)}
                   </Link>
                 </li>
               ))}
@@ -107,7 +110,7 @@ export default function Footer() {
           {/* Col 4 — Latest */}
           <div>
             <p className="text-[0.6875rem] font-sans font-semibold uppercase tracking-[0.08em] text-jade-500 mb-4">
-              Latest
+              {t("latest")}
             </p>
             <ul className="space-y-3">
               {latestLinks.map((l) => (
@@ -116,7 +119,7 @@ export default function Footer() {
                     href={l.href}
                     className="text-[0.8125rem] font-sans text-ink-light/70 hover:text-parchment transition-colors leading-snug block"
                   >
-                    {l.label}
+                    {t(`latestLinks.${l.key}`)}
                   </Link>
                 </li>
               ))}
@@ -127,10 +130,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-parchment/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-[0.75rem] font-sans text-ink-light/40">
-            © {new Date().getFullYear()} TaiwanEats
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
           <p className="text-[0.75rem] font-sans text-ink-light/30 italic font-display">
-            Written by people who eat in Taiwan
+            {t("writtenBy")}
           </p>
         </div>
       </div>

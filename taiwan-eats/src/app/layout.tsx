@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Lora, Plus_Jakarta_Sans } from "next/font/google";
+import { getLocale } from "next-intl/server";
 import "./globals.css";
 
 // Display headings, logotype, pull quotes — calligraphic quality, editorial elegance
@@ -67,14 +68,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
-      <body className={`${cormorant.variable} ${lora.variable} ${jakarta.variable} font-sans bg-parchment text-ink antialiased`}>
+    <html lang={locale}>
+      <body
+        className={`${cormorant.variable} ${lora.variable} ${jakarta.variable} font-sans bg-parchment text-ink antialiased`}
+      >
         {children}
       </body>
     </html>

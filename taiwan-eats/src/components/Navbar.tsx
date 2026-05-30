@@ -1,19 +1,23 @@
 "use client";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 
-const navLinks = [
-  { href: "/dishes",       label: "Dishes" },
-  { href: "/night-markets", label: "Night Markets" },
-  { href: "/cities",       label: "Cities" },
-  { href: "/about",        label: "About" },
-];
+import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { usePathname } from "@/i18n/navigation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname(); // locale-stripped pathname
+  const t = useTranslations("nav");
+
+  const navLinks = [
+    { href: "/dishes",        label: t("dishes") },
+    { href: "/night-markets", label: t("nightMarkets") },
+    { href: "/cities",        label: t("cities") },
+    { href: "/about",         label: t("about") },
+  ];
 
   // Show border only after scrolling past the fold
   useEffect(() => {
@@ -78,8 +82,11 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right side: search icon (desktop) + hamburger (mobile) */}
+          {/* Right side: language switcher + search icon + hamburger */}
           <div className="flex items-center gap-2">
+            {/* Language switcher */}
+            <LanguageSwitcher variant="navbar" />
+
             {/* Search — decorative placeholder */}
             <button
               className="hidden md:flex items-center justify-center w-9 h-9 rounded-lg text-ink-muted hover:text-ink hover:bg-parchment-warm transition-colors"
@@ -95,7 +102,7 @@ export default function Navbar() {
             <button
               className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-ink-secondary hover:text-ink hover:bg-parchment-warm transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
             >
@@ -119,7 +126,6 @@ export default function Navbar() {
       </nav>
 
       {/* ── Full-screen mobile overlay ────────────────────────── */}
-      {/* Rendered in-flow but positioned fixed; z-50 above navbar */}
       <div
         id="mobile-nav"
         role="dialog"
@@ -145,7 +151,7 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(false)}
             className="flex items-center justify-center w-10 h-10 rounded-lg text-ink-light hover:text-parchment transition-colors"
-            aria-label="Close menu"
+            aria-label={t("closeMenu")}
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
               <line x1="3" y1="3" x2="15" y2="15" />
@@ -154,7 +160,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Menu items — staggered fade-in */}
+        {/* Menu items */}
         <nav className="flex flex-col px-8 pt-10 gap-1 flex-1">
           {navLinks.map((l, i) => (
             <Link
@@ -180,23 +186,34 @@ export default function Navbar() {
             <div className="flex-1 h-px bg-parchment" />
           </div>
 
+          {/* Language switcher in mobile menu */}
+          <div
+            style={{
+              opacity: menuOpen ? 1 : 0,
+              transition: `opacity 250ms ease ${60 + navLinks.length * 45}ms`,
+            }}
+          >
+            <p className="text-xs text-parchment/40 font-sans uppercase tracking-widest mb-3">Language</p>
+            <LanguageSwitcher variant="mobile" />
+          </div>
+
           <Link
             href="/subscribe"
             onClick={() => setMenuOpen(false)}
-            className="text-jade-500 hover:text-jade-200 font-sans text-sm font-medium transition-colors"
+            className="mt-6 text-jade-500 hover:text-jade-200 font-sans text-sm font-medium transition-colors"
             style={{
-              transitionDelay: menuOpen ? `${60 + navLinks.length * 45 + 30}ms` : "0ms",
+              transitionDelay: menuOpen ? `${60 + navLinks.length * 45 + 60}ms` : "0ms",
               opacity: menuOpen ? 1 : 0,
-              transition: `opacity 250ms ease ${60 + navLinks.length * 45 + 30}ms`,
+              transition: `opacity 250ms ease ${60 + navLinks.length * 45 + 60}ms`,
             }}
           >
-            Subscribe to the weekly brief →
+            {t("subscribe")}
           </Link>
         </nav>
 
         {/* Footer note */}
         <p className="px-8 pb-10 text-xs text-ink-light/40 font-sans">
-          TaiwanEats · The definitive Taiwan food guide
+          {t("tagline")}
         </p>
       </div>
     </>

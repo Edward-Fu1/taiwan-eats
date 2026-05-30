@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "dishes": "Dishes",
+    "nightMarkets": "Night Markets",
+    "cities": "Cities",
+    "about": "About",
+    "subscribe": "Subscribe to the weekly brief →",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "tagline": "TaiwanEats · The definitive Taiwan food guide"
+  },
+  "home": {
+    "eyebrow": "The definitive Taiwan food guide",
+    "headline": "Your guide to eating",
+    "headlineHighlight": "extraordinary",
+    "headlineSuffix": "in Taiwan",
+    "deck": "Bilingual, honest, and obsessively detailed. From night market staples to regional dishes most visitors never find.",
+    "ctaDishes": "Explore dishes",
+    "ctaCities": "Browse by city",
+    "featuredEyebrow": "Featured reads",
+    "featuredHeading": "Where to eat right now",
+    "allGuides": "All guides →",
+    "browseEyebrow": "Browse by category",
+    "citiesEyebrow": "Explore by city",
+    "citiesHeading": "Choose your next destination",
+    "allCities": "All cities →"
+  },
+  "categories": {
+    "dishesLabel": "Dish Guides",
+    "dishesTagline": "From beef noodle to bubble tea",
+    "nightMarketsLabel": "Night Markets",
+    "nightMarketsTagline": "Shilin, Raohe, and beyond",
+    "citiesLabel": "City Guides",
+    "citiesTagline": "Taipei, Tainan, Kaohsiung",
+    "experiencesLabel": "Experiences",
+    "experiencesTagline": "Food tours & cooking classes"
+  },
+  "cities": {
+    "taipeiTagline": "The capital of eating well",
+    "tainanTagline": "Taiwan's true food capital",
+    "taichungTagline": "Café culture and night life",
+    "kaohsiungTagline": "Seafood and harbour eats"
+  },
+  "footer": {
+    "brandTagline": "The definitive English-language food guide for Taiwan — bilingual, honest, and obsessively detailed.",
+    "explore": "Explore",
+    "info": "Info",
+    "latest": "Latest",
+    "exploreLinks": {
+      "dishes": "Dish Guides",
+      "nightMarkets": "Night Markets",
+      "cities": "City Guides",
+      "experiences": "Experiences"
+    },
+    "infoLinks": {
+      "about": "About us",
+      "writeForUs": "Write for us",
+      "advertise": "Advertise",
+      "contact": "Contact",
+      "privacy": "Privacy"
+    },
+    "latestLinks": {
+      "beefNoodle": "Best beef noodle soup in Taipei — ranked",
+      "shilin": "Shilin Night Market: the complete guide",
+      "bubbleTea": "How to order bubble tea like a local"
+    },
+    "copyright": "© {year} TaiwanEats",
+    "writtenBy": "Written by people who eat in Taiwan"
+  },
+  "common": {
+    "recommended": "Recommended",
+    "travelGuide": "Travel Guide",
+    "cityGuides": "City Guides",
+    "readMore": "Read more →",
+    "back": "Back"
+  },
+  "language": {
+    "switchTo": "Switch language",
+    "en": "EN",
+    "ko": "한국어",
+    "ja": "日本語",
+    "es": "ES"
+  }
+}

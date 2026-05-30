@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "dishes": "料理",
+    "nightMarkets": "夜市",
+    "cities": "都市",
+    "about": "About",
+    "subscribe": "週刊ニュースレターを購読 →",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "tagline": "TaiwanEats · 台湾グルメ完全ガイド"
+  },
+  "home": {
+    "eyebrow": "台湾グルメ完全ガイド",
+    "headline": "台湾で",
+    "headlineHighlight": "本物の味",
+    "headlineSuffix": "を見つけるガイド",
+    "deck": "バイリンガルで正直に、こだわりを持って。夜市の定番から旅行者が知らない地元の料理まで。",
+    "ctaDishes": "料理を探す",
+    "ctaCities": "都市別で見る",
+    "featuredEyebrow": "注目の記事",
+    "featuredHeading": "今すぐ食べに行くべき場所",
+    "allGuides": "すべてのガイド →",
+    "browseEyebrow": "カテゴリ別に探す",
+    "citiesEyebrow": "都市別に探す",
+    "citiesHeading": "次の目的地を選ぼう",
+    "allCities": "すべての都市 →"
+  },
+  "categories": {
+    "dishesLabel": "料理ガイド",
+    "dishesTagline": "牛肉麺からタピオカまで",
+    "nightMarketsLabel": "夜市",
+    "nightMarketsTagline": "士林、饒河、そしてもっと",
+    "citiesLabel": "都市ガイド",
+    "citiesTagline": "台北・台南・高雄",
+    "experiencesLabel": "体験",
+    "experiencesTagline": "フードツアー & 料理教室"
+  },
+  "cities": {
+    "taipeiTagline": "グルメの首都",
+    "tainanTagline": "台湾の本当の食の都",
+    "taichungTagline": "カフェ文化とナイトライフ",
+    "kaohsiungTagline": "海鮮と港の食文化"
+  },
+  "footer": {
+    "brandTagline": "台湾の定番英語グルメガイド — バイリンガルで正直に、こだわりを持って。",
+    "explore": "探索",
+    "info": "情報",
+    "latest": "最新",
+    "exploreLinks": {
+      "dishes": "料理ガイド",
+      "nightMarkets": "夜市",
+      "cities": "都市ガイド",
+      "experiences": "体験"
+    },
+    "infoLinks": {
+      "about": "About",
+      "writeForUs": "寄稿する",
+      "advertise": "広告掲載",
+      "contact": "お問い合わせ",
+      "privacy": "プライバシー"
+    },
+    "latestLinks": {
+      "beefNoodle": "台北の牛肉麺ランキング",
+      "shilin": "士林夜市：完全ガイド",
+      "bubbleTea": "地元民のようにタピオカを注文する方法"
+    },
+    "copyright": "© {year} TaiwanEats",
+    "writtenBy": "台湾で食べる人たちが書いています"
+  },
+  "common": {
+    "recommended": "おすすめ",
+    "travelGuide": "旅行ガイド",
+    "cityGuides": "都市ガイド",
+    "readMore": "続きを読む →",
+    "back": "戻る"
+  },
+  "language": {
+    "switchTo": "言語を切り替える",
+    "en": "EN",
+    "ko": "한국어",
+    "ja": "日本語",
+    "es": "ES"
+  }
+}
