@@ -1,8 +1,13 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "@/i18n/navigation";
-import Link from "next/link";
+import { usePathname, Link } from "@/i18n/navigation";
+
+// Uses next-intl's Link with `locale` prop — this is intentional.
+// When switching to English (default locale), it navigates through /en/...
+// which triggers the middleware to update the NEXT_LOCALE cookie to "en"
+// before redirecting to the prefix-free URL. Without this, clicking EN while
+// the cookie holds "ko" would cause the middleware to redirect back to /ko.
 
 const locales = [
   { code: "en", label: "EN" },
@@ -11,20 +16,13 @@ const locales = [
   { code: "es", label: "ES" },
 ] as const;
 
-// Build the locale-prefixed URL directly so we never generate /en (default has no prefix)
-function localePath(pathname: string, code: string): string {
-  if (code === "en") return pathname || "/";
-  const base = pathname === "/" ? "" : pathname;
-  return `/${code}${base}`;
-}
-
 type Props = {
   variant?: "navbar" | "mobile";
 };
 
 export default function LanguageSwitcher({ variant = "navbar" }: Props) {
   const locale = useLocale();
-  const pathname = usePathname(); // locale-stripped, e.g. "/" or "/dishes"
+  const pathname = usePathname(); // locale-stripped pathname, e.g. "/" or "/dishes"
   const t = useTranslations("language");
 
   if (variant === "mobile") {
@@ -32,11 +30,11 @@ export default function LanguageSwitcher({ variant = "navbar" }: Props) {
       <div className="flex flex-wrap gap-2" aria-label={t("switchTo")}>
         {locales.map((l) => {
           const isActive = locale === l.code;
-          const href = localePath(pathname, l.code);
           return (
             <Link
               key={l.code}
-              href={href}
+              href={pathname}
+              locale={l.code}
               className={`
                 text-sm font-sans font-medium px-3 py-1.5 rounded-lg transition-colors
                 ${isActive
@@ -62,11 +60,11 @@ export default function LanguageSwitcher({ variant = "navbar" }: Props) {
     >
       {locales.map((l) => {
         const isActive = locale === l.code;
-        const href = localePath(pathname, l.code);
         return (
           <Link
             key={l.code}
-            href={href}
+            href={pathname}
+            locale={l.code}
             className={`
               text-[0.6875rem] font-sans font-semibold px-2 py-1 rounded-md transition-colors
               ${isActive
