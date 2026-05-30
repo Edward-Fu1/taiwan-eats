@@ -35,6 +35,25 @@ const guides = [
       </svg>
     ),
   },
+  {
+    href: "/transport/taipei/ubike",
+    title: "YouBike 2.0 — Taipei's City Bike",
+    titleZh: "台北公共自行車",
+    description:
+      "How to rent, ride, and return a YouBike anywhere in Taipei — EasyCard setup, pricing tiers, the dock-and-reset trick, and the best riverside cycling routes.",
+    badge: "Cycling",
+    badgeColor: "bg-jade-50 text-jade-600",
+    time: "24/7",
+    cost: "From NT$5",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="5.5" cy="17.5" r="3.5"/>
+        <circle cx="18.5" cy="17.5" r="3.5"/>
+        <path d="M15 6a1 1 0 0 0 0-2h-3l-3 9H5"/>
+        <path d="m9 13 2.5-7.5"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function TaipeiTransportPage() {
