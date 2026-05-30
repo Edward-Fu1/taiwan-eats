@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Contact TaiwanEats",
+  title: "Contact Taiwan Trip Advice",
   description:
-    "Get in touch with the TaiwanEats team — for editorial questions, partnership enquiries, or to say hello.",
+    "Get in touch with the Taiwan Trip Advice team — for editorial questions, partnership enquiries, or to say hello.",
   alternates: { canonical: "/contact" },
 };
 
@@ -28,21 +28,21 @@ export default function ContactPage() {
                 Corrections, suggestions, or questions about our guides.
               </p>
               <a
-                href="mailto:hello@taiwaneats.com"
+                href="mailto:hello@taiwantripadvice.com"
                 className="inline-block bg-coral-600 hover:bg-coral-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
               >
-                hello@taiwaneats.com
+                hello@taiwantripadvice.com
               </a>
             </div>
 
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
               <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-1">Partnerships</p>
-              <p className="font-semibold text-gray-900 mb-1">Work with TaiwanEats</p>
+              <p className="font-semibold text-gray-900 mb-1">Work with Taiwan Trip Advice</p>
               <p className="text-sm text-gray-600 mb-3">
                 Food tours, restaurant partnerships, travel brand collaborations, and advertising.
               </p>
               <a
-                href="mailto:hello@taiwaneats.com?subject=Partnership%20enquiry"
+                href="mailto:hello@taiwantripadvice.com?subject=Partnership%20enquiry"
                 className="inline-block border border-gray-200 hover:border-gray-400 text-sm font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 Get in touch →

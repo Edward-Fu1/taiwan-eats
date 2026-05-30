@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata = {
-  title: "Subscribe — TaiwanEats",
+  title: "Subscribe — Taiwan Trip Advice",
   description: "Get the weekly Taiwan food brief — new restaurants, seasonal dishes, and tips every Thursday.",
 };
 

@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Advertise — TaiwanEats",
-  description: "Partner with TaiwanEats to reach English-speaking food lovers travelling to Taiwan.",
+  title: "Advertise — Taiwan Trip Advice",
+  description: "Partner with Taiwan Trip Advice to reach English-speaking travellers planning a trip to Taiwan.",
 };
 
 export default function AdvertisePage() {
@@ -11,10 +11,10 @@ export default function AdvertisePage() {
     <main>
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
-        <h1 className="font-serif text-4xl font-bold mb-4">Partner with TaiwanEats</h1>
+        <h1 className="font-serif text-4xl font-bold mb-4">Partner with Taiwan Trip Advice</h1>
         <div className="prose text-gray-600 leading-relaxed space-y-4">
           <p>
-            TaiwanEats reaches English-speaking travellers actively planning trips to Taiwan — people
+            Taiwan Trip Advice reaches English-speaking travellers actively planning trips to Taiwan — people
             deciding where to eat, which tours to book, and what to do.
           </p>
           <h2 className="font-serif text-2xl font-bold text-gray-900 mt-8">Who we work with</h2>

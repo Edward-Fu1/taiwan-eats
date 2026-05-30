@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ArticleSchema from "@/components/ArticleSchema";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Best Beef Noodle Soup in Taipei — Ranked & Mapped",
@@ -14,99 +15,87 @@ export const metadata = {
   alternates: { canonical: "/dishes/beef-noodle-soup-taipei" },
 };
 
-const spots = [
-  {
-    rank: 1,
-    name: "Lin Dong Fang",
-    chinese: "林東芳牛肉麵",
-    neighborhood: "Zhongshan",
-    price: "NT$220",
-    verdict: "The best in the city. Clear broth, hand-cut noodles, beef that falls apart with a chopstick. Unassuming fluorescent-lit space, open until 5am. This is the benchmark against which all others should be measured.",
-    order: "Half-tendon, half-beef (半筋半肉). Add a side of braised cucumber (滷小黃瓜) and a cold century egg.",
-    crowd: "Locals and in-the-know food journalists. Occasional celebrity chef sighting.",
-    note: "No sign in English. Look for the long queue on Anhe Road at night.",
-  },
-  {
-    rank: 2,
-    name: "Yong Kang Beef Noodle",
-    chinese: "永康牛肉麵",
-    neighborhood: "Da'an",
-    price: "NT$280",
-    verdict: "Rich, complex red-braised broth with a slight sweetness from rock sugar and a depth that takes hours of simmering to achieve. The most photogenic bowl on this list. Has been here since 1963.",
-    order: "Spicy beef noodle (辣牛肉麵). Their chili oil is house-made and excellent. Get it medium.",
-    crowd: "Everyone — tourists, expats, and regulars who've been coming for 20 years.",
-    note: "On Jinshan South Road. Expect a 20–30 min queue at lunch.",
-  },
-  {
-    rank: 3,
-    name: "Liao's Beef Noodle",
-    chinese: "廖家牛肉麵",
-    neighborhood: "Songshan",
-    price: "NT$180",
-    verdict: "Humbler presentation than the top two, but the clear broth depth is extraordinary. Under-the-radar and proud of it. The tendon here has the best texture on this list — soft through the center, with a firm exterior edge.",
-    order: "Clear broth (清燉) — it's where they shine. Don't bother with the red braise here.",
-    crowd: "Neighborhood regulars. You'll likely be the only non-local in the room.",
-    note: "Closes by 2pm. Get there before 11:30am for the best broth.",
-  },
-  {
-    rank: 4,
-    name: "Laoma Beef Noodle",
-    chinese: "老媽牛肉麵",
-    neighborhood: "Zhongzheng",
-    price: "NT$200",
-    verdict: "The spiciest bowl on this list by a wide margin. Sichuan-influenced with a numbing heat that builds over the course of the meal. Not authentic Taiwanese style, but outstanding in its own right.",
-    order: "Spicy red-braised with extra chili (特辣紅燒). Cold sesame noodles (涼麵) as a side.",
-    crowd: "Spice-seekers and younger locals. Lively atmosphere.",
-    note: "Near Zhongzheng Memorial Hall MRT. Good for late night — open until 1am.",
-  },
-  {
-    rank: 5,
-    name: "Fang Jia Beef Noodle",
-    chinese: "方家牛肉麵",
-    neighborhood: "Zhongshan",
-    price: "NT$195",
-    verdict: "Best value on this list. The broth is a half-and-half blend of clear and red-braised styles — unusual, and it works. Noodles are machine-cut but better quality than most. A reliable weekday lunch.",
-    order: "The house mixed-style (招牌牛肉麵). Ask for wide noodles (寬麵).",
-    crowd: "Office workers and regulars. Fast service, high turnover.",
-    note: "Cash only. Seating is tight — be prepared to share a table.",
-  },
-  {
-    rank: 6,
-    name: "Guoxin Beef Noodle",
-    chinese: "國心牛肉麵",
-    neighborhood: "Xinyi",
-    price: "NT$250",
-    verdict: "The most upscale setting on this list — clean, modern, no plastic stools. The broth is refined and slightly lighter than the traditional red-braised style. A good choice if you want to impress someone who might normally skip noodle shops.",
-    order: "Premium beef shank noodle (頂級牛腱麵). The shank is sliced thin and fanned — aesthetics matter here.",
-    crowd: "Xinyi office workers, couples on semi-casual dates.",
-    note: "Accepts credit cards. Reserve a table for dinner on weekends.",
-  },
-];
+export default async function BeefNoodleSoupPage() {
+  const t = await getTranslations("beefNoodle");
+  const tCommon = await getTranslations("common");
 
-const faq = [
-  {
-    q: "What's the difference between red-braised and clear broth beef noodle soup?",
-    a: "Red-braised (紅燒) uses soy sauce, bean paste, spices, and often a touch of sugar, creating a dark, rich, complex broth. Clear broth (清燉) is a pure beef bone and slow-cooked broth with minimal seasoning — it showcases the meat's natural flavour and is considerably harder to do well. Both are great; the choice depends on what you're in the mood for.",
-  },
-  {
-    q: "How much should I expect to pay for a bowl?",
-    a: "NT$150–NT$280 for a standard bowl at a sit-down shop. The baseline is usually NT$180–220. Paying more than NT$300 at a non-hotel restaurant is unusual unless it's a premium spot or includes extras.",
-  },
-  {
-    q: "What's the best part of the beef to order?",
-    a: "Half-tendon, half-beef (半筋半肉) is the default recommendation — you get the collagen-rich chew of the tendon alongside the tender braised beef. Pure beef shank (牛腱) is great if you want something more uniform. Avoid pure tendon only unless you specifically love the texture.",
-  },
-  {
-    q: "Is beef noodle soup a breakfast food?",
-    a: "A few shops open early and serve it for breakfast, but it's primarily a lunch and dinner dish. Most of the best spots open at 10:30–11am and close once the broth runs out — which at the best places can be as early as 2pm.",
-  },
-  {
-    q: "Can I get vegetarian beef noodle soup?",
-    a: "A few dedicated vegetarian shops serve mock-beef (素牛肉麵) using gluten or soy protein. The broth is mushroom and vegetable-based and surprisingly complex. Look for shops with 素食 signs.",
-  },
-];
+  const spots = [
+    {
+      rank: 1,
+      name: "Lin Dong Fang",
+      chinese: "林東芳牛肉麵",
+      neighborhood: "Zhongshan",
+      price: "NT$220",
+      verdict: t("verdict1"),
+      order: t("order1"),
+      crowd: t("crowd1"),
+      note: t("note1"),
+    },
+    {
+      rank: 2,
+      name: "Yong Kang Beef Noodle",
+      chinese: "永康牛肉麵",
+      neighborhood: "Da'an",
+      price: "NT$280",
+      verdict: t("verdict2"),
+      order: t("order2"),
+      crowd: t("crowd2"),
+      note: t("note2"),
+    },
+    {
+      rank: 3,
+      name: "Liao's Beef Noodle",
+      chinese: "廖家牛肉麵",
+      neighborhood: "Songshan",
+      price: "NT$180",
+      verdict: t("verdict3"),
+      order: t("order3"),
+      crowd: t("crowd3"),
+      note: t("note3"),
+    },
+    {
+      rank: 4,
+      name: "Laoma Beef Noodle",
+      chinese: "老媽牛肉麵",
+      neighborhood: "Zhongzheng",
+      price: "NT$200",
+      verdict: t("verdict4"),
+      order: t("order4"),
+      crowd: t("crowd4"),
+      note: t("note4"),
+    },
+    {
+      rank: 5,
+      name: "Fang Jia Beef Noodle",
+      chinese: "方家牛肉麵",
+      neighborhood: "Zhongshan",
+      price: "NT$195",
+      verdict: t("verdict5"),
+      order: t("order5"),
+      crowd: t("crowd5"),
+      note: t("note5"),
+    },
+    {
+      rank: 6,
+      name: "Guoxin Beef Noodle",
+      chinese: "國心牛肉麵",
+      neighborhood: "Xinyi",
+      price: "NT$250",
+      verdict: t("verdict6"),
+      order: t("order6"),
+      crowd: t("crowd6"),
+      note: t("note6"),
+    },
+  ];
 
-export default function BeefNoodleSoupPage() {
+  const faq = [
+    { q: t("faq1q"), a: t("faq1a") },
+    { q: t("faq2q"), a: t("faq2a") },
+    { q: t("faq3q"), a: t("faq3a") },
+    { q: t("faq4q"), a: t("faq4a") },
+    { q: t("faq5q"), a: t("faq5a") },
+  ];
+
   return (
     <main className="bg-parchment">
       <ReadingProgress />
@@ -133,7 +122,7 @@ export default function BeefNoodleSoupPage() {
           <ol className="flex items-center gap-1.5 font-sans text-[0.75rem] text-ink-muted">
             <li><Link href="/" className="hover:text-ink transition-colors">Home</Link></li>
             <li aria-hidden="true" className="text-parchment-border">›</li>
-            <li><Link href="/dishes" className="hover:text-ink transition-colors">Dish Guides</Link></li>
+            <li><Link href="/dishes" className="hover:text-ink transition-colors">{tCommon("dishGuides")}</Link></li>
             <li aria-hidden="true" className="text-parchment-border">›</li>
             <li className="text-ink-secondary truncate">Beef Noodle Soup</li>
           </ol>
@@ -142,17 +131,17 @@ export default function BeefNoodleSoupPage() {
         {/* Category chip */}
         <div className="cat-chip text-terracotta-600 mb-4">
           <span className="cat-dot bg-terracotta-500" aria-hidden="true" />
-          Noodles
+          {t("tag")}
         </div>
 
         {/* Headline */}
         <h1 className="font-display font-semibold text-ink leading-[1.1] tracking-[-0.02em] text-[2.25rem] md:text-[3rem] mb-5 max-w-2xl">
-          The best beef noodle soup in Taipei — ranked and mapped
+          {t("title")}
         </h1>
 
         {/* Deck */}
         <p className="font-serif italic text-[1.125rem] text-ink-secondary leading-relaxed mb-5 max-w-xl">
-          We ate at 12 spots across the city so you don&apos;t have to. Here&apos;s who won, who disappointed, and exactly what to order at each one.
+          {t("intro")}
         </p>
 
         {/* Byline */}
@@ -161,7 +150,7 @@ export default function BeefNoodleSoupPage() {
           <span aria-hidden="true">·</span>
           <time dateTime="2026-05-29">Updated May 2026</time>
           <span aria-hidden="true">·</span>
-          <span>12 min read</span>
+          <span>{t("readTime")}</span>
         </div>
       </div>
 
@@ -248,7 +237,7 @@ export default function BeefNoodleSoupPage() {
         {/* Section: Rankings */}
         <OrnamentDivider className="my-10" />
         <h2 className="article-h2" style={{ marginTop: 0, paddingTop: 0, borderTop: "none" }}>
-          The ranking
+          {t("rankingsTitle")}
         </h2>
         <p className="font-sans text-[0.875rem] text-ink-muted mb-7">12 shops tested. These 6 are worth your time.</p>
 
@@ -273,7 +262,9 @@ export default function BeefNoodleSoupPage() {
               </div>
               <p className="font-sans text-[0.875rem] text-ink-secondary leading-relaxed mb-4">{spot.verdict}</p>
               <div className="bg-terracotta-50 border border-terracotta-100 rounded-md px-4 py-3 mb-3">
-                <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-wide text-terracotta-600 mb-1">What to order</p>
+                <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-wide text-terracotta-600 mb-1">
+                  {t("whatToOrder")}
+                </p>
                 <p className="font-sans text-[0.875rem] text-ink">{spot.order}</p>
               </div>
               <div className="flex gap-4">
@@ -317,13 +308,13 @@ export default function BeefNoodleSoupPage() {
 
         <div className="divide-y divide-parchment-border border-t border-b border-parchment-border mb-6">
           {[
-            { zh: "牛肉麵",      en: "Beef noodle soup — what you're here for" },
-            { zh: "紅燒 / 清燉",  en: "Red-braised / clear broth — specify the style" },
-            { zh: "半筋半肉",     en: "Half tendon, half beef — the recommended default" },
-            { zh: "小碗 / 大碗",  en: "Small / large bowl" },
+            { zh: "牛肉麵",          en: "Beef noodle soup — what you're here for" },
+            { zh: "紅燒 / 清燉",      en: "Red-braised / clear broth — specify the style" },
+            { zh: "半筋半肉",         en: "Half tendon, half beef — the recommended default" },
+            { zh: "小碗 / 大碗",      en: "Small / large bowl" },
             { zh: "辣 / 不辣 / 微辣", en: "Spicy / not spicy / slightly spicy" },
-            { zh: "加麵",        en: "Extra noodles (small upcharge)" },
-            { zh: "細麵 / 寬麵",  en: "Thin / wide noodles" },
+            { zh: "加麵",            en: "Extra noodles (small upcharge)" },
+            { zh: "細麵 / 寬麵",      en: "Thin / wide noodles" },
           ].map((item) => (
             <div key={item.zh} className="flex justify-between items-center py-3">
               <span className="font-display font-semibold text-ink text-[1.0625rem]">{item.zh}</span>
@@ -373,7 +364,7 @@ export default function BeefNoodleSoupPage() {
         </div>
 
         {/* FAQ */}
-        <h2 className="article-h2">Frequently asked questions</h2>
+        <h2 className="article-h2">{t("faqTitle")}</h2>
         <div className="space-y-6 mb-12">
           {faq.map((item) => (
             <div key={item.q}>
@@ -386,14 +377,14 @@ export default function BeefNoodleSoupPage() {
         {/* Keep exploring */}
         <OrnamentDivider className="mb-8" />
         <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-muted mb-4">
-          Keep exploring
+          {tCommon("keepExploring")}
         </p>
         <div className="flex flex-wrap gap-2 mb-12">
           {[
             { href: "/cities/taipei",         label: "Taipei City Guide",    color: "bg-mist-50 text-mist-700 border-mist-100" },
             { href: "/dishes/xiao-long-bao",  label: "Xiao Long Bao Guide",  color: "bg-terracotta-50 text-terracotta-700 border-terracotta-100" },
             { href: "/dishes/lu-rou-fan",     label: "Lu Rou Fan Guide",     color: "bg-gold-50 text-gold-700 border-gold-100" },
-            { href: "/dishes",                label: "All Dish Guides",      color: "bg-parchment-warm text-ink-secondary border-parchment-border" },
+            { href: "/dishes",                label: tCommon("allDishGuides"), color: "bg-parchment-warm text-ink-secondary border-parchment-border" },
           ].map((l) => (
             <Link
               key={l.href}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core navigation -->
+  <url>
+    <loc>https://taiwan-eats.pages.dev/</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/cities</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/night-markets</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/experiences</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/about</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/subscribe</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/advertise</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/write-for-us</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+
+  <!-- Dish guides -->
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes/beef-noodle-soup-taipei</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes/bubble-tea-guide</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes/lu-rou-fan</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes/oyster-omelette</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes/scallion-pancake</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/dishes/xiao-long-bao</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+
+  <!-- City guides -->
+  <url>
+    <loc>https://taiwan-eats.pages.dev/cities/taipei</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/cities/tainan</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/cities/kaohsiung</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/cities/taichung</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+
+  <!-- Night market guides -->
+  <url>
+    <loc>https://taiwan-eats.pages.dev/night-markets/shilin</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/night-markets/raohe</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/night-markets/shilin-vs-raohe</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/night-markets/huayuan</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://taiwan-eats.pages.dev/night-markets/liuhe</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+
+</urlset>

@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — TaiwanEats",
-  description: "How TaiwanEats collects, uses, and protects your personal information.",
+  title: "Privacy Policy — Taiwan Trip Advice",
+  description: "How Taiwan Trip Advice collects, uses, and protects your personal information.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         <p className="text-gray-400 text-sm mb-10">Last updated: May 2026</p>
         <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-6">
           <p>
-            TaiwanEats (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your
+            Taiwan Trip Advice (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your
             privacy. This policy explains what information we collect, how we use it, and your rights.
           </p>
 

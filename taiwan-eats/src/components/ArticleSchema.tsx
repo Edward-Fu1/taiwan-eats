@@ -43,7 +43,7 @@ export default function ArticleSchema({
     publisher: {
       "@type": "Organization",
       "@id": "https://taiwan-eats.pages.dev/#organization",
-      name: "TaiwanEats",
+      name: "Taiwan Trip Advice",
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/og-default.jpg`,

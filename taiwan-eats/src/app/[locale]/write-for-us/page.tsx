@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Write for Us — TaiwanEats",
-  description: "Contribute to TaiwanEats — the definitive English-language food guide to Taiwan.",
+  title: "Write for Us — Taiwan Trip Advice",
+  description: "Contribute to Taiwan Trip Advice — the definitive English-language travel guide for Taiwan.",
 };
 
 export default function WriteForUsPage() {
@@ -11,7 +11,7 @@ export default function WriteForUsPage() {
     <main>
       <div className="max-w-2xl mx-auto px-6">
         <Navbar />
-        <h1 className="font-serif text-4xl font-bold mb-4">Write for TaiwanEats</h1>
+        <h1 className="font-serif text-4xl font-bold mb-4">Write for Taiwan Trip Advice</h1>
         <div className="prose text-gray-600 leading-relaxed space-y-4">
           <p>
             We publish deep-dive food guides written by people who actually live in Taiwan and eat everything.

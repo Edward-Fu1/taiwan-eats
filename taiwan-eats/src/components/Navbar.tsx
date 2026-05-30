@@ -50,9 +50,10 @@ export default function Navbar() {
           <Link
             href="/"
             className="font-display text-[1.25rem] tracking-[-0.01em] select-none"
-            aria-label="TaiwanEats — home"
+            aria-label="Taiwan Trip Advice — home"
           >
-            Taiwan<span className="text-terracotta-500">Eats</span>
+            Taiwan<span className="text-terracotta-500">Trip</span>{" "}
+            <span className="text-ink-muted font-light">Advice</span>
           </Link>
 
           {/* Desktop nav links */}
@@ -146,7 +147,8 @@ export default function Navbar() {
             className="font-display text-[1.25rem] text-parchment"
             onClick={() => setMenuOpen(false)}
           >
-            Taiwan<span className="text-jade-500">Eats</span>
+            Taiwan<span className="text-jade-500">Trip</span>{" "}
+            <span className="text-parchment/50 font-light">Advice</span>
           </Link>
           <button
             onClick={() => setMenuOpen(false)}

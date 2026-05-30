@@ -32,34 +32,34 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://taiwan-eats.pages.dev"),
   title: {
-    default: "Taiwan Food Guide — Restaurants, Dishes & Night Markets | TaiwanEats",
-    template: "%s | TaiwanEats",
+    default: "Taiwan Trip Advice — Your Complete Guide to Taiwan",
+    template: "%s | Taiwan Trip Advice",
   },
   description:
-    "Bilingual, honest, and obsessively detailed food guides for Taiwan. From night market staples to regional dishes most tourists never find.",
-  keywords: ["Taiwan food", "Taiwan restaurants", "night markets", "Taipei food guide", "what to eat in Taiwan"],
+    "Honest, detailed travel guides for Taiwan — food, cities, transport and everything in between. Plan your perfect Taiwan trip.",
+  keywords: ["Taiwan travel", "Taiwan trip", "Taiwan guide", "Taipei travel guide", "what to do in Taiwan"],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "TaiwanEats — Your Guide to Eating Extraordinary in Taiwan",
+    title: "Taiwan Trip Advice — Your Guide to Extraordinary Travel in Taiwan",
     description:
-      "Bilingual, honest, and obsessively detailed food guides for Taiwan. From night market staples to regional dishes most tourists never find.",
+      "Honest, detailed travel guides for Taiwan — food, cities, transport and everything in between.",
     type: "website",
     url: "https://taiwan-eats.pages.dev",
-    siteName: "TaiwanEats",
+    siteName: "Taiwan Trip Advice",
     images: [
       {
         url: "/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "TaiwanEats — Taiwan food guide",
+        alt: "Taiwan Trip Advice — your complete guide to Taiwan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TaiwanEats — Your Guide to Eating Extraordinary in Taiwan",
+    title: "Taiwan Trip Advice — Your Guide to Extraordinary Travel in Taiwan",
     description:
-      "Bilingual, honest, and obsessively detailed food guides for Taiwan.",
+      "Honest, detailed travel guides for Taiwan — food, cities, transport and everything in between.",
     images: ["/og-default.jpg"],
   },
   icons: {

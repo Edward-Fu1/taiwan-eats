@@ -35,7 +35,7 @@ export default function TaiwanMascot() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          aria-label="TaiwanEats mascot — a cheerful boba tea cup"
+          aria-label="Taiwan Trip Advice mascot — a cheerful boba tea cup"
         >
           {/* ── Straw ────────────────────────────────────────── */}
           <rect x="37" y="1" width="6" height="26" rx="3" fill="#4A7860" />

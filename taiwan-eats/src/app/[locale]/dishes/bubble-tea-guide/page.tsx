@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ArticleSchema from "@/components/ArticleSchema";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "How to Order Bubble Tea Like a Local in Taiwan",
@@ -12,16 +13,40 @@ export const metadata = {
   alternates: { canonical: "/dishes/bubble-tea-guide" },
 };
 
-const types = [
-  { emoji: "🧋", name: "Classic Milk Tea", chinese: "珍珠奶茶", desc: "Black tea with creamer (not real milk at most shops) and tapioca pearls. The original. Still the best." },
-  { emoji: "🍵", name: "Tieguanyin Milk Tea", chinese: "鐵觀音奶茶", desc: "Made with roasted oolong instead of black tea. Deeper, more complex, slightly nutty. The connoisseur's choice." },
-  { emoji: "🥛", name: "Fresh Milk Tea", chinese: "鮮奶茶", desc: "Real fresh milk instead of creamer. Costs more, tastes better. Worth the upgrade at any serious shop." },
-  { emoji: "🍋", name: "Lemon Green Tea", chinese: "檸檬綠茶", desc: "No milk. Refreshing, tart, and criminally underrated. The best hot-weather order." },
-  { emoji: "🟤", name: "Brown Sugar Milk Tea", chinese: "黑糖鮮奶茶", desc: "Tiger-stripe caramel, fresh milk, tapioca pearls. Instagram-famous for a reason — but skip the tourist traps." },
-  { emoji: "🍑", name: "Passion Fruit Green Tea", chinese: "百香果綠茶", desc: "A Taiwanese staple you won't find abroad. Bright, tropical, and naturally sweet. No milk needed." },
-];
+export default async function BubbleTeaGuidePage() {
+  const t = await getTranslations("bubbleTea");
+  const tCommon = await getTranslations("common");
 
-export default function BubbleTeaGuidePage() {
+  const types = [
+    { emoji: "🧋", name: t("classicMilkTeaName"), chinese: "珍珠奶茶", desc: t("classicMilkTeaDesc") },
+    { emoji: "🍵", name: t("tieguanyinName"), chinese: "鐵觀音奶茶", desc: t("tieguanyinDesc") },
+    { emoji: "🥛", name: t("freshMilkTeaName"), chinese: "鮮奶茶", desc: t("freshMilkTeaDesc") },
+    { emoji: "🍋", name: t("lemonGreenTeaName"), chinese: "檸檬綠茶", desc: t("lemonGreenTeaDesc") },
+    { emoji: "🟤", name: t("brownSugarName"), chinese: "黑糖鮮奶茶", desc: t("brownSugarDesc") },
+    { emoji: "🍑", name: t("passionFruitName"), chinese: "百香果綠茶", desc: t("passionFruitDesc") },
+  ];
+
+  const sweetnessLevels = [
+    { level: "全糖 (100%)", label: t("sweet100Label") },
+    { level: "少糖 (50%)", label: t("sweet50Label") },
+    { level: "微糖 (25%)", label: t("sweet25Label") },
+    { level: "無糖 (0%)", label: t("sweet0Label") },
+  ];
+
+  const iceLevels = [
+    { level: "正常冰", label: t("iceNormalLabel") },
+    { level: "少冰 (50%)", label: t("ice50Label") },
+    { level: "微冰 (30%)", label: t("ice30Label") },
+    { level: "去冰", label: t("iceNoneLabel") },
+  ];
+
+  const shops = [
+    { name: "Chun Shui Tang", chinese: "春水堂", note: t("chunShuiTangNote") },
+    { name: "Tiger Sugar", chinese: "老虎堂", note: t("tigerSugarNote") },
+    { name: "Yifang Taiwan Fruit Tea", chinese: "一芳台灣水果茶", note: t("yifangNote") },
+    { name: "50 Lan", chinese: "50嵐", note: t("fiftyLanNote") },
+  ];
+
   return (
     <main>
       <BreadcrumbSchema
@@ -41,39 +66,42 @@ export default function BubbleTeaGuidePage() {
         <Navbar />
 
         <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-10">
-          <Image src="https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=1200&h=600&auto=format&fit=crop&q=80" alt="Bubble tea" fill className="object-cover" priority />
+          <Image
+            src="https://images.unsplash.com/photo-1600340432752-a407bab94cc3?w=1200&h=600&auto=format&fit=crop&q=80"
+            alt="Bubble tea"
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
 
         <div className="mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-xs font-medium tracking-widest uppercase text-amber-600 bg-amber-50 px-3 py-1 rounded-lg">Drink Guide</span>
-            <span className="text-xs text-gray-400">5 min read</span>
+            <span className="text-xs font-medium tracking-widest uppercase text-amber-600 bg-amber-50 px-3 py-1 rounded-lg">
+              {t("tag")}
+            </span>
+            <span className="text-xs text-gray-400">{t("readTime")}</span>
           </div>
           <h1 className="font-serif text-4xl font-bold leading-tight mb-4">
-            Ordering bubble tea like a local
+            {t("title")}
           </h1>
           <p className="text-gray-500 text-lg font-light leading-relaxed">
-            Bubble tea was invented in Taiwan in the 1980s and it&apos;s been perfected here ever since. Here&apos;s how to navigate the menu without defaulting to whatever sounds familiar.
+            {t("intro")}
           </p>
         </div>
 
         {/* Sweetness/Ice guide */}
         <section className="mb-10">
-          <h2 className="font-serif text-2xl font-bold mb-5">The sweetness & ice system</h2>
-          <p className="text-gray-500 text-sm mb-4 leading-relaxed">
-            Every Taiwanese bubble tea shop lets you customize sweetness and ice level. Most tourists order full-sweet, full-ice and wonder why it tastes like sugar syrup. Here&apos;s what locals actually order:
-          </p>
+          <h2 className="font-serif text-2xl font-bold mb-5">{t("sweetnessIceTitle")}</h2>
+          <p className="text-gray-500 text-sm mb-4 leading-relaxed">{t("sweetnessIceIntro")}</p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="bg-amber-50 rounded-xl p-5">
-              <p className="text-xs font-medium tracking-widest uppercase text-amber-500 mb-3">Sweetness levels</p>
+              <p className="text-xs font-medium tracking-widest uppercase text-amber-500 mb-3">
+                {t("sweetnessLabel")}
+              </p>
               <div className="space-y-2 text-sm">
-                {[
-                  { level: "全糖 (100%)", label: "Full sweet — tourist default. Too much." },
-                  { level: "少糖 (50%)", label: "Half sweet — the local standard." },
-                  { level: "微糖 (25%)", label: "Light sweet — lets the tea shine." },
-                  { level: "無糖 (0%)", label: "No sugar — for purists only." },
-                ].map((s) => (
+                {sweetnessLevels.map((s) => (
                   <div key={s.level}>
                     <span className="font-medium text-gray-800">{s.level}</span>
                     <span className="text-gray-500 block text-xs">{s.label}</span>
@@ -82,14 +110,11 @@ export default function BubbleTeaGuidePage() {
               </div>
             </div>
             <div className="bg-blue-50 rounded-xl p-5">
-              <p className="text-xs font-medium tracking-widest uppercase text-blue-400 mb-3">Ice levels</p>
+              <p className="text-xs font-medium tracking-widest uppercase text-blue-400 mb-3">
+                {t("iceLabel")}
+              </p>
               <div className="space-y-2 text-sm">
-                {[
-                  { level: "正常冰", label: "Normal ice — dilutes the tea." },
-                  { level: "少冰 (50%)", label: "Less ice — recommended." },
-                  { level: "微冰 (30%)", label: "Light ice — the sweet spot." },
-                  { level: "去冰", label: "No ice — room temp, full flavor." },
-                ].map((s) => (
+                {iceLevels.map((s) => (
                   <div key={s.level}>
                     <span className="font-medium text-gray-800">{s.level}</span>
                     <span className="text-gray-500 block text-xs">{s.label}</span>
@@ -99,23 +124,26 @@ export default function BubbleTeaGuidePage() {
             </div>
           </div>
           <div className="border-l-4 border-amber-400 pl-5">
-            <p className="text-sm text-gray-700"><span className="font-medium">Local default:</span> 少糖 (50% sweet), 微冰 (30% ice). This is what regulars order without thinking about it.</p>
+            <p className="text-sm text-gray-700">
+              <span className="font-medium">{t("localDefault")}</span>{" "}
+              {t("localDefaultText")}
+            </p>
           </div>
         </section>
 
         {/* Types */}
         <section className="mb-10">
-          <h2 className="font-serif text-2xl font-bold mb-6">What to actually order</h2>
+          <h2 className="font-serif text-2xl font-bold mb-6">{t("whatToOrderTitle")}</h2>
           <div className="space-y-4">
-            {types.map((t) => (
-              <div key={t.name} className="flex gap-4 items-start border border-gray-100 rounded-xl p-4">
-                <span className="text-2xl mt-0.5">{t.emoji}</span>
+            {types.map((type) => (
+              <div key={type.name} className="flex gap-4 items-start border border-gray-100 rounded-xl p-4">
+                <span className="text-2xl mt-0.5">{type.emoji}</span>
                 <div>
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="font-medium text-gray-900">{t.name}</span>
-                    <span className="text-xs text-gray-400">{t.chinese}</span>
+                    <span className="font-medium text-gray-900">{type.name}</span>
+                    <span className="text-xs text-gray-400">{type.chinese}</span>
                   </div>
-                  <p className="text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{type.desc}</p>
                 </div>
               </div>
             ))}
@@ -124,14 +152,9 @@ export default function BubbleTeaGuidePage() {
 
         {/* Where to go */}
         <section className="mb-10">
-          <h2 className="font-serif text-2xl font-bold mb-4">Where to go</h2>
+          <h2 className="font-serif text-2xl font-bold mb-4">{t("whereToGoTitle")}</h2>
           <div className="space-y-3">
-            {[
-              { name: "Chun Shui Tang", chinese: "春水堂", note: "Claims to have invented bubble tea in 1986. Classic recipe, slightly sweet. Good starting point." },
-              { name: "Tiger Sugar", chinese: "老虎堂", note: "The brown sugar tiger stripe original. Long queues, worth it once." },
-              { name: "Yifang Taiwan Fruit Tea", chinese: "一芳台灣水果茶", note: "Fresh fruit teas using Taiwanese fruit. Lighter and more seasonal than milk tea chains." },
-              { name: "50 Lan", chinese: "50嵐", note: "The local chain everyone drinks. No frills, consistent, NT$50–80. Order the Assam milk tea." },
-            ].map((shop) => (
+            {shops.map((shop) => (
               <div key={shop.name} className="py-3 border-b border-gray-50">
                 <div className="flex items-baseline gap-2 mb-0.5">
                   <span className="font-medium text-gray-900">{shop.name}</span>
@@ -144,10 +167,16 @@ export default function BubbleTeaGuidePage() {
         </section>
 
         <section className="mb-10">
-          <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-4">Keep exploring</p>
+          <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-4">
+            {tCommon("keepExploring")}
+          </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/dishes" className="bg-amber-50 text-amber-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">🍜 All Dish Guides</Link>
-            <Link href="/cities/taipei" className="bg-blue-50 text-blue-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">🏙️ Taipei Guide</Link>
+            <Link href="/dishes" className="bg-amber-50 text-amber-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">
+              🍜 {tCommon("allDishGuides")}
+            </Link>
+            <Link href="/cities/taipei" className="bg-blue-50 text-blue-700 text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">
+              🏙️ {tCommon("taipeiGuide")}
+            </Link>
           </div>
         </section>
 

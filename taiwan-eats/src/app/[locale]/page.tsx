@@ -19,7 +19,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "home" });
   return {
     alternates: { canonical: "/" },
-    title: `TaiwanEats — ${t("headline")} ${t("headlineHighlight")} ${t("headlineSuffix")}`,
+    title: `Taiwan Trip Advice — ${t("headline")} ${t("headlineHighlight")} ${t("headlineSuffix")}`,
   };
 }
 
@@ -29,18 +29,18 @@ const organizationSchema = {
     {
       "@type": "Organization",
       "@id": "https://taiwan-eats.pages.dev/#organization",
-      name: "TaiwanEats",
+      name: "Taiwan Trip Advice",
       url: "https://taiwan-eats.pages.dev",
-      description: "Bilingual, honest, and obsessively detailed food guides for Taiwan.",
+      description: "Honest, detailed travel guides for Taiwan — food, cities, transport and everything in between.",
       inLanguage: "en",
-      email: "hello@taiwaneats.com",
+      email: "hello@taiwantripadvice.com",
     },
     {
       "@type": "WebSite",
       "@id": "https://taiwan-eats.pages.dev/#website",
       url: "https://taiwan-eats.pages.dev",
-      name: "TaiwanEats",
-      description: "Your guide to eating extraordinary in Taiwan — dishes, cities, and night markets.",
+      name: "Taiwan Trip Advice",
+      description: "Your complete guide to extraordinary travel in Taiwan — food, cities, activities and trip planning.",
       publisher: { "@id": "https://taiwan-eats.pages.dev/#organization" },
       inLanguage: "en",
       potentialAction: {
@@ -57,7 +57,8 @@ const organizationSchema = {
 
 // SVG icons are locale-agnostic — defined once
 const categoryIcons = {
-  dishes: (
+  food: (
+    // Bowl with steam — Food & Dining
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 11C3 7.134 6.686 4 11 4s8 3.134 8 7" />
       <line x1="1" y1="11" x2="21" y2="11" />
@@ -65,17 +66,8 @@ const categoryIcons = {
       <path d="M8 19h6" />
     </svg>
   ),
-  nightMarkets: (
-    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M11 2L11 5" />
-      <path d="M7 4L9 6.5" />
-      <path d="M15 4L13 6.5" />
-      <path d="M6.5 7.5C6.5 7.5 5 9 5 11C5 14.314 7.686 17 11 17C14.314 17 17 14.314 17 11C17 9 15.5 7.5 15.5 7.5H6.5Z" />
-      <line x1="8" y1="20" x2="14" y2="20" />
-      <line x1="11" y1="17" x2="11" y2="20" />
-    </svg>
-  ),
   cities: (
+    // City skyline — City Guides
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="8" width="5" height="13" />
       <rect x="8" y="4" width="6" height="17" />
@@ -83,9 +75,19 @@ const categoryIcons = {
       <line x1="1" y1="21" x2="21" y2="21" />
     </svg>
   ),
-  experiences: (
+  activities: (
+    // Compass — Activities
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2L14.4 8.8L21.5 9.3L16.2 13.8L17.9 21L12 17.3L6.1 21L7.8 13.8L2.5 9.3L9.6 8.8L12 2Z" />
+      <circle cx="11" cy="11" r="9" />
+      <polygon points="14,8 10.5,10.5 8,14 11.5,11.5" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  planning: (
+    // Folded map — Trip Planning
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 5l5-2 6 2 5-2v14l-5 2-6-2-5 2V5z" />
+      <line x1="8" y1="3" x2="8" y2="17" />
+      <line x1="14" y1="5" x2="14" y2="19" />
     </svg>
   ),
 };
@@ -99,22 +101,13 @@ function HomeContent() {
 
   const categories = [
     {
-      key: "dishes",
-      label: tCat("dishesLabel"),
-      tagline: tCat("dishesTagline"),
+      key: "food",
+      label: tCat("foodLabel"),
+      tagline: tCat("foodTagline"),
       href: "/dishes",
       accent: "text-terracotta-500",
       border: "border-terracotta-100",
       bg: "bg-terracotta-50 hover:bg-terracotta-100/60",
-    },
-    {
-      key: "nightMarkets",
-      label: tCat("nightMarketsLabel"),
-      tagline: tCat("nightMarketsTagline"),
-      href: "/night-markets",
-      accent: "text-lantern-500",
-      border: "border-lantern-100",
-      bg: "bg-lantern-50 hover:bg-lantern-100/60",
     },
     {
       key: "cities",
@@ -126,13 +119,22 @@ function HomeContent() {
       bg: "bg-mist-50 hover:bg-mist-100/60",
     },
     {
-      key: "experiences",
-      label: tCat("experiencesLabel"),
-      tagline: tCat("experiencesTagline"),
+      key: "activities",
+      label: tCat("activitiesLabel"),
+      tagline: tCat("activitiesTagline"),
       href: "/experiences",
       accent: "text-gold-600",
       border: "border-gold-100",
       bg: "bg-gold-50 hover:bg-gold-100/60",
+    },
+    {
+      key: "planning",
+      label: tCat("planningLabel"),
+      tagline: tCat("planningTagline"),
+      href: "/about",
+      accent: "text-lantern-500",
+      border: "border-lantern-100",
+      bg: "bg-lantern-50 hover:bg-lantern-100/60",
     },
   ] as const;
 

@@ -48,7 +48,8 @@ export default function Footer() {
               href="/"
               className="font-display text-[1.3rem] text-parchment hover:text-white transition-colors mb-4 block"
             >
-              Taiwan<span className="text-jade-500">Eats</span>
+              Taiwan<span className="text-jade-500">Trip</span>{" "}
+              <span className="text-parchment/50 font-light">Advice</span>
             </Link>
             <p className="text-xs text-ink-light/60 font-sans leading-relaxed mb-5">
               {t("brandTagline")}
@@ -58,7 +59,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-ink-light/50 hover:text-ink-light font-sans transition-colors"
-              aria-label="TaiwanEats on Instagram"
+              aria-label="Taiwan Trip Advice on Instagram"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
